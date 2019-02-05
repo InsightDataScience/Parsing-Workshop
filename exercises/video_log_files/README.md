@@ -5,15 +5,15 @@ The log files of the video server have the shape
 
 ```
 video-id   user-id   start/stop         timestamp
-A1  userid01    start   09/09/2018-11:55:40
-A1  userid01    stop    09/09/2018-12:05:40
-A1  userid01    start   09/09/2018-13:25:40
-A1  userid01    stop    09/09/2018-14:40:40
-B1  userid01    start   09/09/2018-14:40:41
-A1  userid01    start   09/09/2018-15:55:40
-B1  userid01    stop    09/09/2018-16:00:40
-A1  userid01    stop    09/09/2018-16:05:40
-A1  userid01    start   09/21/2018-11:55:40
+A1         userid01    start      09/09/2018-11:55:40
+A1         userid01    stop       09/09/2018-12:05:40
+A1         userid01    start      09/09/2018-13:25:40
+A1         userid01    stop       09/09/2018-14:40:40
+B1         userid01    start      09/09/2018-14:40:41
+A1         userid01    start      09/09/2018-15:55:40
+B1         userid01    stop       09/09/2018-16:00:40
+A1         userid01    stop       09/ 09/2018-16:05:40
+A1         userid01    start      09/ 21/2018-11:55:40
 ```
 
 and can be found in logs.txt.
