@@ -1,0 +1,42 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  0.540 ms *  0.499 ms
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.307 ms  1.170 ms  1.233 ms
+ 3  tge2-4-53.krs2-p2.mmx.se.sn.net (194.100.250.13)  2.475 ms  2.447 ms  2.339 ms
+ 4  tge1-2.bgt-peer2.mmx.se.sn.net (88.131.143.114)  2.476 ms  2.448 ms  2.475 ms
+ 5  xe-4-0-0.10G.albnxu7.ip.tele.dk (195.215.109.145)  3.445 ms  3.139 ms  3.307 ms
+ 6  pos0-0.2488M.albnxg1.ip.tele.dk (83.88.25.165)  3.304 ms  3.280 ms  3.443 ms
+ 7  pos6-0.2488M.nyk2nxg2.ip.tele.dk (83.88.26.6)  97.270 ms  97.247 ms  97.461 ms
+ 8  sl-gw37-nyc-14-0.sprintlink.net (160.81.182.197)  97.183 ms  97.289 ms  97.604 ms
+ 9  sl-bb21-nyc-4-0.sprintlink.net (144.232.13.65)  97.875 ms  97.530 ms  97.458 ms
+10  sl-bb27-pen-12-0.sprintlink.net (144.232.20.97)  113.086 ms  113.250 ms  112.914 ms
+11  sl-bb26-pen-15-0.sprintlink.net (144.232.16.93)  100.384 ms  101.276 ms  99.249 ms
+12  sl-bb25-pen-15-0.sprintlink.net (144.232.16.89)  112.945 ms  113.166 ms  113.001 ms
+13  * sl-crs1-stk-0-0-0-3.sprintlink.net (144.232.8.167)  169.067 ms *
+14  sl-bb20-sj-2-0.sprintlink.net (144.232.18.150)  197.306 ms  170.243 ms  170.921 ms
+15  sl-st20-sj-0-0.sprintlink.net (144.232.18.106)  186.145 ms  185.480 ms  185.523 ms
+16  sl-microsoft-32-0.sprintlink.net (144.223.242.78)  186.917 ms  186.439 ms  186.641 ms
+17  ge-6-3-0-55.sjc-64cb-1b.ntwk.msn.net (207.46.37.197)  172.807 ms  173.024 ms  172.996 ms
+18  ge-0-0-0-0.sjc-64cb-1a.ntwk.msn.net (207.46.37.57)  186.563 ms  188.130 ms  186.594 ms
+19  ge-7-1-0-0.by2-64c-1a.ntwk.msn.net (207.46.33.18)  173.777 ms  174.078 ms  173.807 ms
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

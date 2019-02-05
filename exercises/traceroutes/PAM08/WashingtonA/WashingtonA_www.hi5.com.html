@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><title>University of Washington Traceroute Gateway</title>
+<link rel="stylesheet" type="text/css" href="/home/home.css" />
+<script language="JavaScript" type="text/javascript">
+<!-- Hide script
+//<![CDATA[
+M=false;
+N=false;
+app=navigator.appName.substring(0,1);
+if(app=='N') N=true; else M=true;
+function Reset() {
+	if(M) {	
+		if(document.TRACEROUTE.search_address.value) {
+			document.write("<CENTER><H1>TRACE ABORTED</H1></CENTER>");
+			setTimeout("window.location='traceroute.cgi'",1000);
+			document.write("<CENTER>BROWSER WILL AUTOMATICALLY REFRESH</CENTER>");
+		}
+	}
+
+	if(N) {	
+		if(document.TRACEROUTE.search_address.value) {
+			document.write("<H1>TRACE ABORTED</H1>");
+			stop();
+		}
+	}	
+}
+
+//]]> End script hiding -->
+</script>
+</head><body>
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/home/home.css" type="text/css"> 
+  
+
+</head>
+<body>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.washington.edu/"><img id="toplogo" src="/home/graphics/UWlogo150p.gif" alt="University of Washington" border="0" /></a>
+
+<div id="toolbar">
+    &nbsp;<span class="l1text"><a href="/home/search.html">Search</a> |
+    <a href="/home/directories.html">Directories</a> |
+    <a href="http://www.lib.washington.edu/research/">Reference
+    Tools</a></span></div>
+
+
+<!--Section Banner Table -->
+ 
+ 
+  
+  
+ 
+<div class="bannerwrapper">
+  <div id="topbanner" ><img src="/home/graphics/rib0.gif" width="6" height="16" alt="" /></div>
+</div>
+
+<div id="crumbs"><span class="l1text"><a href="/">UW Home</a> &gt; <a href="/uwin/">UWIN</a> &gt; <a href="/networking/">Networking</a> &gt; <a href="/networking/tools/">Tools</a></span>&nbsp;</div><div class="forceclear"></div>
+
+
+
+
+
+
+
+
+<h1>University of Washington Traceroute Gateway</h1>Below is a gateway to the standard UNIX traceroute program which
+	determines the route taken by packets across a network from one host to
+	another.  Type the destination host or IP address, and hit enter or click 
+	on the submit key<FORM NAME = "TRACEROUTE" METHOD="GET"  ENCTYPE="application/x-www-form-urlencoded">IP <input type="text" name="search_address" value="204.13.51.244" /><p />OPTIONS<br /><input type="checkbox" name="numeric_address" value="-n" /> Print hop addresses numerically<br /><input type="checkbox" name="max_hop" value="-m" /> Max time-to-live<input type="text" name="max_hop_value" value="30" size="3" maxlength="3" /><br /><input type="checkbox" name="wait_time" value="-w" /> Seconds to wait for response<input type="text" name="wait_time_value" value="2" size="2" maxlength="2" /><br /><input type="checkbox" name="number_query" value="-q" /> Number of Queries<input type="text" name="number_query_value" value="3" size="2" maxlength="2" /><br /><input type="checkbox" name="number_out" value="TRUE" /> Number of Time Outs<input type="text" name="number_out_value" value="3" size="2" maxlength="2" /><p /><input type="submit" name="Submit" value="Submit" /> <input type="button" name="Abort" value="Abort" onclick="Reset()" /> <input type="submit" name=".defaults" value="Clear Form" /> <input type="hidden" name=".cgifields" value="number_query" /><input type="hidden" name=".cgifields" value="wait_time" /><input type="hidden" name=".cgifields" value="numeric_address" /><input type="hidden" name=".cgifields" value="number_out" /><input type="hidden" name=".cgifields" value="max_hop" /></form><hr /><br /> 1  acar-ads-01-vlan859 (140.142.16.67)  0.243 ms  0.203 ms  0.195 ms
+<br /> 2  uwcr-ads-01-vlan3802 (205.175.108.9)  0.218 ms  0.196 ms  0.214 ms
+<br /> 3  uwcr-ads-01-vlan1829 (205.175.101.117)  0.432 ms  0.278 ms  0.276 ms
+<br /> 4  uwbr-ads-01-vlan1802 (205.175.101.10)  0.339 ms  0.332 ms  0.415 ms
+<br /> 5  iccr-sttlwa01-02-ge-2-2-0-4000.infra.pnw-gigapop.net (209.124.188.132)  0.370 ms  0.429 ms  0.391 ms
+<br /> 6  pnwgp-trcust.sttlwa01.transitrail.net (137.164.131.134)  5.940 ms  0.427 ms  0.529 ms
+<br /> 7  te4-3--300.tr01-sttlwa01.transitrail.net (137.164.131.133)  0.511 ms  0.479 ms  0.477 ms
+<br /> 8  twtelecom.com (198.32.180.64)  51.270 ms  0.818 ms  0.607 ms
+<br /> 9  Ge3-0-Cr01-365m-SFO.unwiredltd.net (206.80.24.126)  19.662 ms  19.712 ms  19.849 ms
+<br />10  Ge3-0-Cr01-365m-SFO.unwiredltd.net (206.80.24.126)  19.721 ms  19.660 ms  19.720 ms
+<br />11  204.11.104.54 (204.11.104.54)  20.034 ms  20.079 ms  20.074 ms
+<br />12  204.13.51.244 (204.13.51.244)  19.970 ms  20.270 ms  20.095 ms
+<H1>TRACE COMPLETE</H1><P><A HREF="/uwnet/">UW Network Topology</A>--a description of the UW network infrastructure</P>
+
+<div id="footer"><div id="footerseal">
+<a href="http://www.washington.edu/"><img src="/home/graphics/blockw.gif" width="53" height="37" alt="UW Logo" /></a>
+</div>
+<div id="addressright"></div>
+<div id="address"><address><a href="http://depts.washington.edu/cac/">Computing &amp; Communications</a><BR>
+<a href="/computing/help/">Send a question to C&amp;C</a><br />
+Modified: August 7, 2007
+</address>
+</div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,175 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="Pragma" content="no-cache">
+ <meta http-equiv="Cache-Control" content="no-cache">
+ <title> IP Network Performance - Router to Host Traceroute </title>
+ <link href="http://www.globalcrossing.com/styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor=#FFFFFF leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr valign="top">
+  <td>
+   <table width="100%" border="0" cellspacing="0" cellpadding="8" vspace="0" hspace="0">
+    <tr>
+     <td width="10%"><img src="/images/gc_logo.gif" alt="Global Crossing" vspace="0" hspace="0"></td>
+    </tr>
+   </table>
+
+   <table width="100%" vspace="0" hspace="0" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td bgcolor="000000"  height="18" align="right"><img src="/images/spacer.gif" width=1 height=1></td>
+    </tr>
+    <tr>
+     <td bgcolor="3366FF"  height="7" align="right"><img src="/images/spacer.gif" width=1 height=1></td>
+    </tr>
+   </table> 
+
+   <center>
+    <table width="75%" border="0">
+     <tr valign="bottom">
+      <td>
+       <font size=2>
+       <center>
+       <font size=+1>
+       <b><u>IP Network Performance</u></b>
+       </font>
+       </center>
+
+
+				<center>
+				<b><u>Looking Glass Utilities - Router to Host Traceroute</u></b>
+				<br>
+				<font size=2>
+				Allows a user to view all router hops encountered in
+				the path between a Global Crossing node and a specified
+				URL address
+				</font>
+				</center>
+			<form method=get action="/dotcom/link7r.shtml">
+<br>Choose a source:<br>
+<select name=src size=1>
+<option value="AMS2">Amsterdam, NL
+<option value="ATL1">Atlanta, Georgia
+<option value="PTY1">Balboa, Panama
+<option value="BBS1">Basingstoke, Chineham Park, UK
+<option value="BOS1">Boston, MA, US
+<option value="EZE1">Buenos Aires, AR
+<option value="CHI1">Chicago, IL, US
+<option value="CLE1">Cleveland, OH, US
+<option value="CPH1">Copenhagen, DK
+<option value="DAL1">Dallas, TX, US
+<option value="DEN2">Denver, CO, US
+<option value="FRA2">Frankfurt, DE
+<option value="CLK1">Hong Kong, China
+<option value="HOU1">Houston, TX
+<option value="KCY1">Kansas City, MO, US
+<option value="LON3">London, UK
+<option value="LAX1">Los Angeles, CA, US
+<option value="MAD1">Madrid, Spain
+<option value="MEX1">Mexico City, MX
+<option value="MIA1" selected>Miami, FL, US
+<option value="LIN1">Milan, Italy
+<option value="MIN1">Minneapolis, Minnesota
+<option value="JFK1">New York, NY, US (#2)
+<option value="PAO2">Palo Alto, CA, US
+<option value="CDG2">Paris, FR
+<option value="PHI1">Philadelphia, PA, US
+<option value="PHX1">Phoenix, AZ, US
+<option value="SAC1">Sacramento, California
+<option value="SAN1">San Diego, CA, US
+<option value="SFO1">San Francisco, CA, US
+<option value="SJC2">San Jose, California
+<option value="GRU1">Sao Paulo, BR
+<option value="SEA1">Seattle, WA, US
+<option value="WSH1">Shirley, NY, US
+<option value="QPG1">Singapore, Singapore
+<option value="SNV2">Sunnyvale, CA, US (#1)
+<option value="RSE1">Sydney, Australia
+<option value="TPA1">Tampa, FL, US
+<option value="TYO1">Tokyo, Japan
+<option value="WDC2">Washington DC, US
+<option value="ZRH1">Zurich, Switzerland
+</select>
+&nbsp;<br>&nbsp;<br>
+Specify a destination host
+<br><i>( ie. www.globalcrossing.com )</i><br>
+<input type=hidden name=mode value=r2h>
+<input name=dst value="209.11.168.113"><br>
+<input type=hidden name=type value="trace">
+<input type=submit value="start my query"><br>
+</form>
+
+
+       </font>
+      </td>
+     </tr>
+    </table>
+   </center>
+ 
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr align="center">
+     <td background="/images/line.lrII.jpg"><img src="/images/line.lrII.jpg" width="100%" height="1"></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<br><br>
+ 
+
+			<div style="padding-left: 4em;">
+		
+			Trying trace from node 'Miami, FL, US' to '209.11.168.113'<br><br>
+		<br>&nbsp;&nbsp;&nbsp;&nbsp; 1   64.214.16.65 (64.214.16.65)   0.656 ms  0.476 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 2   ge1-1-10G.ar1.SNV2.gblx.net (67.17.105.2)   65.632 ms  65.538 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 3   INTERNAP.te1-3.ar1.snv2.gblx.net (64.210.28.142)   66.402 ms  66.559 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 4   border2.pc2-0-bbnet2.sje.pnap.net (66.151.144.69)   66.574 ms  66.626 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 5   * (friendster-4a.border2.sje.pnap.net)   66.151.139.42 ms  95.647 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 6   * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 7   * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 8   * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 9   * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 10  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 11  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 12  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 13  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 14  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 15  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 16  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 17  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 18  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 19  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 20  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 21  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 22  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 23  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 24  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 25  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 26  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 27  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 28  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 29  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 30  * (*)   * ms  * ms
+<br><br>
+Command completed<br>
+
+				<div style="width: 50%">
+				<br>
+				If a returned message contains or is completely composed of ***, this is
+				probably the result of a filtering device (i.e. firewall) encountered along
+				the path being traced.  The same explanation would apply for no output in
+				the case of a ping query.
+				<p>
+				<br>
+				</div>
+			
+			</div>
+		
+
+</body>
+</html>
+
+

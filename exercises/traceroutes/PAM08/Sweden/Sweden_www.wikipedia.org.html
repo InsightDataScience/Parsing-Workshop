@@ -1,0 +1,23 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  0.560 ms  0.510 ms  0.395 ms
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.088 ms  1.188 ms  1.093 ms
+ 3  194.100.250.13 (194.100.250.13)  2.476 ms  2.314 ms  2.339 ms
+ 4  tge1-2.bgt-peer2.mmx.se.sn.net (88.131.143.114)  5.601 ms  2.395 ms  2.338 ms
+ 5  xe-4-0-0.10G.albnxu7.ip.tele.dk (195.215.109.145)  3.441 ms  3.136 ms  3.169 ms
+ 6  pos0-0.2488M.albnxg1.ip.tele.dk (83.88.25.165)  3.305 ms  3.277 ms  3.170 ms
+ 7  pos6-0.2488M.nyk2nxg2.ip.tele.dk (83.88.26.6)  97.048 ms  96.867 ms  96.910 ms
+ 8  * * *
+ 9  66.192.247.243 (66.192.247.243)  137.996 ms  138.262 ms  137.868 ms
+10  ge8-13.csw5-pmtpa.wikimedia.org (66.193.50.242)  150.548 ms  150.505 ms  150.272 ms
+11  rr.pmtpa.wikimedia.org (66.230.200.100)  136.589 ms  136.873 ms  136.632 ms
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

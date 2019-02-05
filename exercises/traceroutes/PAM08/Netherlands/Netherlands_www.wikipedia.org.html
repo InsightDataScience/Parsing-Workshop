@@ -1,0 +1,38 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 66.230.200.100</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="66.230.200.100">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 66.230.200.100 (66.230.200.100), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  3.329 ms
+ 2  ams-ix-c00.wvfiber.net (195.69.145.58)  0.721 ms
+ 3  lon-c00-pos-4-0.OC48-ams-pos11-0.wvfiber.net (63.223.28.201)  7.963 ms
+ 4  66.216.48.225 (66.216.48.225)  7.963 ms
+ 5  66.216.48.213 (66.216.48.213)  82.661 ms
+ 6  ash-c01-tge-3-3.TG-nyc-c01-1-1.wvfiber.net (66.216.1.161)  89.061 ms
+ 7  atl-c01-tge-3-1.TG-ash-c01-3-1.wvfiber.net (66.216.1.157)  103.294 ms
+ 8  cpp-hostway.wvfiber.net (63.223.8.26)  107.001 ms
+ 9  66.113.197.54 (66.113.197.54)  123.679 ms
+10  ge8-1.csw5-pmtpa.wikimedia.org (84.40.25.222)  124.237 ms
+11  rr.pmtpa.wikimedia.org (66.230.200.100)  124.907 ms
+		</pre></code>

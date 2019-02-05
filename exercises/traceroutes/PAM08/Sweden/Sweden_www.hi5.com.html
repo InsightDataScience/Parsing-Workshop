@@ -1,0 +1,32 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  0.545 ms  0.641 ms  0.393 ms
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.089 ms  1.327 ms  1.095 ms
+ 3  tge2-3-54.ign-p2.got.se.sn.net (194.100.250.21)  11.741 ms  11.711 ms  11.742 ms
+ 4  tge1-2.cty-p2.orb.se.sn.net (88.131.143.37)  11.739 ms  11.984 ms  11.879 ms
+ 5  tge2-2.kst-p2.sto.se.sn.net (88.131.143.43)  11.739 ms  11.572 ms  11.601 ms
+ 6  tge1-4.kst-peer2.sto.se.sn.net (88.131.143.64)  11.740 ms  11.710 ms  11.603 ms
+ 7  netnod-ix-ge-a-sth-1500.cogent.com (194.68.123.155)  16.303 ms  15.718 ms  16.303 ms
+ 8  p11-0.core01.cph01.atlas.cogentco.com (130.117.1.145)  22.150 ms  22.170 ms  22.105 ms
+ 9  p9-0.core01.ham01.atlas.cogentco.com (130.117.2.125)  26.118 ms  25.809 ms  25.707 ms
+10  p2-0.core01.dus01.atlas.cogentco.com (130.117.1.189)  25.839 ms  25.772 ms  25.703 ms
+11  p0-0.core01.ams03.atlas.cogentco.com (130.117.1.65)  67.738 ms  25.780 ms  25.873 ms
+12  p1-0.core02.lon01.atlas.cogentco.com (130.117.1.110)  38.369 ms  38.629 ms  38.448 ms
+13  t2-4.mpd02.lon01.atlas.cogentco.com (130.117.2.22)  38.682 ms  38.513 ms  38.422 ms
+14  t3-2.mpd01.bos01.atlas.cogentco.com (130.117.0.185)  112.705 ms  112.616 ms  112.255 ms
+15  t9-4.mpd01.ord01.atlas.cogentco.com (66.28.4.198)  133.354 ms  133.056 ms  133.689 ms
+16  t9-4.mpd01.mci01.atlas.cogentco.com (66.28.4.185)  145.538 ms  150.895 ms  145.438 ms
+17  t9-4.mpd01.sfo01.atlas.cogentco.com (154.54.6.161)  179.034 ms  179.210 ms  179.338 ms
+18  t4-4.mpd01.sfo02.atlas.cogentco.com (154.54.3.130)  179.438 ms  179.249 ms  179.065 ms
+19  38.101.48.78 (38.101.48.78)  179.537 ms  179.286 ms  179.562 ms
+20  204.13.51.244 (204.13.51.244)  179.841 ms  179.970 ms  180.101 ms
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

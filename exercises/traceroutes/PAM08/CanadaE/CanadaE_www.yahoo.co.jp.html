@@ -1,0 +1,75 @@
+<title>traceroute from 134.117.14.35 (netmon.physics.carleton.ca) to  124.83.167.212 (124.83.167.212) for 136.159.17.51</title>
+<div align='center'><table border='1'>
+       <tr><td align='center'><a href='http://www.stanford.edu/'>
+        <img src='http://www.slac.stanford.edu/comp/net/wan-mon/stanford-seal.gif'
+           alt='Stanford University seal' title='Stanford University seal'></a>
+        <a href='/'><img src='http://www.slac.stanford.edu/icon/slac3.gif' 
+          alt='SLAC logo, click here to learn more about SLAC'
+          title='SLAC logo, click here to learn more about SLAC'      
+        ></a>
+      </td><td align='center'><h2>traceroute from 134.117.14.35 (netmon.physics.carleton.ca) to  124.83.167.212 (124.83.167.212) for 136.159.17.51</h2>
+CGI script maintainer: 
+       <a href='mailto:cottrell@slac.stanford.edu'><i>
+       Les Cottrell</i></a>, <a href='http://www.slac.stanford.edu/'>SLAC</a>. 
+       Script version 4.0, 5/13/06, Les Cottrell.<br>
+       <a href='http://www.slac.stanford.edu/comp/net/traceroute/traceroute.pl'>
+       Download perl source code</a>.<br><small>To perform a 
+       <!-- a href='http://boardwatch.internet.com/mag/96/dec/bwm38.html' -->
+        traceroute
+        from netmon.physics.carleton.ca, 
+        enter the desired target 
+       <a href='http://webopedia.internet.com/TERM/d/domain_name.html'>host.domain</a> 
+       (e.g. www.yahoo.com) or     
+       <a href='http://aol.pcwebopedia.com/TERM/I/IP_address.html'>Internet 
+       address</a> (e.g. 137.138.28.228) in the box
+       below:</small>
+       <form action='/cgi-bin/traceroute.pl' method='GET'>
+       Enter target name or address:
+       <input type='text' size='30' name='target'> then push 'Enter' key.
+       </form>Lookup: 
+       <a href='http://www.slac.stanford.edu/comp/net/util/nslookup.html'>host name</a> |
+       <a href='http://www.slac.stanford.edu/comp/net/util/mxlookup.html'>mail domain</a> |
+       <a href='http://www.networksolutions.com/cgi-bin/whois/whois'>domain name</a> |
+       <a href='http://cello.cs.uiuc.edu/cgi-bin/slamm/ip2ll/'>latitude & longitude</a> |
+       <a href='http://visualroute.visualware.com/'>visual traceroute</a> |
+       <a href='http://www.ietf.org/rfc/rfc2142.txt'>contacting someone</a>
+       </td><td><b>Related web sites</b><br><a href='http://www.slac.stanford.edu/comp/net/wan-mon/traceroute-srv.html'>
+        <b>Traceroute servers</b></a>,<br><a href='http://www.slac.stanford.edu/comp/net/wan-mon/tutorial.html'>
+        Monitoring tutorial</a>,<br><a href='http://www-iepm.slac.stanford.edu/'>
+        Internet monitoring</a><br><a href='http://www.ipaddressworld.com/'>What is my IP address?</a></tr></table></div>
+<table bgcolor='yellow'><tr><td align='center'><font color=red><b>
+Please note that traceroutes can appear similar 
+to port scans. If you see a suspected port scan alert, 
+for example from your firewall, with 
+a series of ports in the range 33434 - 33465, coming 
+from netmon.physics.carleton.ca it is probably a reverse traceroute from our 
+web based reverse traceroute server. Please do NOT report this to 
+us, it will almost certainly be a waste of both of our times. 
+For more on this see<br>
+<a href='http://www.slac.stanford.edu/comp/net/wan-mon/traceroute-srv.html#security'>
+Traceroute security issues</a>.</b></font></td></tr></table>
+<pre>
+traceroute: Warning: Multiple interfaces found; using 134.117.14.35 @ hme0
+traceroute to 124.83.167.212 (124.83.167.212), 30 hops max, 40 byte packets
+ 1  unix-gate.physics.carleton.ca (134.117.14.1)  1.616 ms  1.155 ms  1.042 ms
+ 2  10.50.254.3 (10.50.254.3)  1.051 ms  1.046 ms  0.996 ms
+ 3  10.30.34.1 (10.30.34.1)  1.158 ms  1.053 ms  1.012 ms
+ 4  10.30.53.1 (10.30.53.1)  1.055 ms  1.066 ms  1.090 ms
+ 5  134.117.254.241 (134.117.254.241)  1.265 ms  1.294 ms  1.278 ms
+ 6  10.30.56.19 (10.30.56.19)  1.275 ms 134.117.254.243 (134.117.254.243)  1.631 ms  1.308 ms
+ 7  10.30.56.1 (10.30.56.1)  1.699 ms  5.910 ms  1.764 ms
+ 8  fa0-1.na01.b011027-0.yyz02.atlas.cogentco.com (38.104.158.41)  10.318 ms  10.033 ms  10.360 ms
+ 9  g0-2.core01.yyz01.atlas.cogentco.com (66.250.14.229)  10.345 ms  11.359 ms  10.500 ms
+10  v3492.mpd01.yyz01.atlas.cogentco.com (154.54.5.81)  10.626 ms  10.301 ms  10.853 ms
+11  t7-4.mpd01.ord01.atlas.cogentco.com (154.54.7.73)  24.853 ms  27.295 ms  25.898 ms
+12  t2-4.mpd01.mci01.atlas.cogentco.com (154.54.2.233)  54.245 ms  36.026 ms  36.012 ms
+13  t2-4.mpd01.sfo01.atlas.cogentco.com (154.54.6.42)  114.202 ms  108.416 ms  169.801 ms
+14  g3-0-0.core02.sfo01.atlas.cogentco.com (154.54.3.117)  69.595 ms  69.617 ms  97.490 ms
+15  p6-0.core01.sjc04.atlas.cogentco.com (66.28.4.234)  71.088 ms  70.979 ms  71.538 ms
+16  jt.sjc04.atlas.cogentco.com (154.54.13.82)  73.155 ms  70.848 ms  70.181 ms
+17  cba-gw5-pos2-0.gw.odn.ad.jp (210.142.163.85)  216.501 ms  219.238 ms  218.368 ms
+18  CBCrk-06-pos11-0.gw.odn.ad.jp (210.142.163.2)  216.208 ms  215.553 ms  217.186 ms
+19  TYOrk-06P14-0.nw.odn.ad.jp (143.90.160.130)  240.505 ms  219.169 ms  228.071 ms
+20  tyo-gw1-pos8-0.gw.odn.ad.jp (210.142.163.126)  216.459 ms  217.745 ms  216.095 ms
+21  tyork-05-pos12-0.gw.odn.ad.jp (210.142.161.77)  215.795 ms  216.540 ms  215.878 ms
+22 

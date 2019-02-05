@@ -1,0 +1,51 @@
+<html>
+<head><title>IP-Plus</title></head>
+<link rel="stylesheet" href="../style.css" type="text/css">
+<body>
+
+<table width=608 border=0 cellspacing=0 cellpadding=0 summary="">
+<tr><td width=468 valign="top">    
+<table width=468 border=0 cellspacing=0 cellpadding=0>
+<tr><td class="title">IP-Plus Traceroute Server</td>
+</tr>
+<tr><td><img src="/images/spacer.gif" width=1 height=20 border=0></td></tr>
+<tr><td>
+<form name="main"><input type=hidden name=what value=>
+<table  cellspacing="0" cellpadding="4" width="468" class="blueFrame">
+<tr class="darkblue"><td colspan="2">Traceroute</td></tr>
+<tr><td></td></tr>
+ <tr>
+    <td  width="160"><b>Host</b></td>
+    <td width="308">
+        <input type="text" name="name" size="45" value=195.122.131.250>
+    </td>
+  </tr>
+  
+   <tr><td><input type=hidden name=action value=process></td></tr>
+ <tr><td>
+ <span class="button"><a href="#" onclick="document.main.submit(); return false;" onmouseover="window.status='Submit'; return true" onmouseout="window.status=''; return true">Submit</a></span>
+  </td></tr> 
+  <tr><td>&nbsp;</td></tr>
+ </table>
+</form>
+</td></tr></table>
+</td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+</tr>
+</table>
+
+<pre>
+ 1  164.128.248.1 (164.128.248.1)  0.516 ms  0.363 ms  0.332 ms
+ 2  164.128.248.12 (164.128.248.12)  0.719 ms  0.702 ms  0.737 ms
+ 3  i79zhh-005-gig10-1.bb.ip-plus.net (138.187.131.225)  1.309 ms  1.088 ms  1.272 ms
+ 4  i79zhh-015-vla200.bb.ip-plus.net (138.187.129.46)  1.302 ms  1.094 ms  1.306 ms
+ 5  i79tix-015-xxx1-1.bb.ip-plus.net (138.187.129.74)  1.271 ms  1.252 ms  1.518 ms
+ 6  ge-4-1.hsa2.Zurich1.Level3.net (213.242.67.129)  1.378 ms  1.148 ms  1.319 ms
+ 7  ae-0-52.mpls2.Zurich1.Level3.net (213.242.66.18)  1.343 ms  1.433 ms  1.206 ms
+ 8  ae-1-0.bbr1.Frankfurt1.Level3.net (212.187.128.30)  7.018 ms so-4-2-0.bbr2.Frankfurt1.Level3.net (212.187.128.214)  20.690 ms ae-1-0.bbr1.Frankfurt1.Level3.net (212.187.128.30)  14.565 ms
+ 9  ae-23-54.car3.Frankfurt1.Level3.net (4.68.118.113)  7.314 ms  7.036 ms ae-13-53.car3.Frankfurt1.Level3.net (4.68.118.81)  8.790 ms
+10  rapidshare.com (195.122.131.250)  7.180 ms  7.475 ms  6.931 ms
+<pre>
+</body>
+</html>

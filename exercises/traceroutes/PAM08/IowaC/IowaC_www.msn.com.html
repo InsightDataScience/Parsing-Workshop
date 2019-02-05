@@ -1,0 +1,56 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 207.68.173.76</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing ...............T
+<BR>
+TTL LFT trace to 207.68.173.76:80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 0.8ms
+<BR>
+ 2  [5056] ins-h4-et-1-11-118.desm.netins.net (167.142.56.196) 0.3ms
+<BR>
+ 3  [5056] ins-h3-1-20-131.kmrr.netins.net (167.142.56.113) 7.6ms
+<BR>
+ 4  [5056] ins-c3-et-1-0-0-123.kmrr.netins.net (167.142.56.118) 7.7ms
+<BR>
+ 5  [1239] sl-gw22-chi-10-1.sprintlink.net (144.223.3.45) 16.1ms
+<BR>
+ 6  [1239] sl-bb23-chi-4-1.sprintlink.net (144.232.10.9) 16.2ms
+<BR>
+ 7  [1239] sl-bb25-chi-14-0.sprintlink.net (144.232.26.94) 16.3ms
+<BR>
+ 8  [1239] sl-bb20-sea-1-0.sprintlink.net (144.232.20.85) 212.5ms
+<BR>
+ 9  [1239] sl-gw14-sea-7-0.sprintlink.net (144.232.6.154) 60.0ms
+<BR>
+10  [1239] sl-microsoft-23-0.sprintlink.net (144.224.113.146) 60.3ms
+<BR>
+11  [8075] ge-5-3-0-56.tuk-64cb-1a.ntwk.msn.net (207.46.44.1) 60.1ms
+<BR>
+12  [8075] ten2-1.tuk-76c-1b.ntwk.msn.net (207.46.36.201) 60.1ms
+<BR>
+13  [AS?] 10.22.20.202 60.3ms
+<BR>
+14  [8075] [target] 207.68.173.76:80 60.7ms
+<BR>
+</td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

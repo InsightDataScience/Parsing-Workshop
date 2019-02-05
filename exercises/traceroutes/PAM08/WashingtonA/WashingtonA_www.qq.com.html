@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><title>University of Washington Traceroute Gateway</title>
+<link rel="stylesheet" type="text/css" href="/home/home.css" />
+<script language="JavaScript" type="text/javascript">
+<!-- Hide script
+//<![CDATA[
+M=false;
+N=false;
+app=navigator.appName.substring(0,1);
+if(app=='N') N=true; else M=true;
+function Reset() {
+	if(M) {	
+		if(document.TRACEROUTE.search_address.value) {
+			document.write("<CENTER><H1>TRACE ABORTED</H1></CENTER>");
+			setTimeout("window.location='traceroute.cgi'",1000);
+			document.write("<CENTER>BROWSER WILL AUTOMATICALLY REFRESH</CENTER>");
+		}
+	}
+
+	if(N) {	
+		if(document.TRACEROUTE.search_address.value) {
+			document.write("<H1>TRACE ABORTED</H1>");
+			stop();
+		}
+	}	
+}
+
+//]]> End script hiding -->
+</script>
+</head><body>
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/home/home.css" type="text/css"> 
+  
+
+</head>
+<body>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.washington.edu/"><img id="toplogo" src="/home/graphics/UWlogo150p.gif" alt="University of Washington" border="0" /></a>
+
+<div id="toolbar">
+    &nbsp;<span class="l1text"><a href="/home/search.html">Search</a> |
+    <a href="/home/directories.html">Directories</a> |
+    <a href="http://www.lib.washington.edu/research/">Reference
+    Tools</a></span></div>
+
+
+<!--Section Banner Table -->
+ 
+ 
+  
+  
+ 
+<div class="bannerwrapper">
+  <div id="topbanner" ><img src="/home/graphics/rib0.gif" width="6" height="16" alt="" /></div>
+</div>
+
+<div id="crumbs"><span class="l1text"><a href="/">UW Home</a> &gt; <a href="/uwin/">UWIN</a> &gt; <a href="/networking/">Networking</a> &gt; <a href="/networking/tools/">Tools</a></span>&nbsp;</div><div class="forceclear"></div>
+
+
+
+
+
+
+
+
+<h1>University of Washington Traceroute Gateway</h1>Below is a gateway to the standard UNIX traceroute program which
+	determines the route taken by packets across a network from one host to
+	another.  Type the destination host or IP address, and hit enter or click 
+	on the submit key<FORM NAME = "TRACEROUTE" METHOD="GET"  ENCTYPE="application/x-www-form-urlencoded">IP <input type="text" name="search_address" value="60.28.14.220" /><p />OPTIONS<br /><input type="checkbox" name="numeric_address" value="-n" /> Print hop addresses numerically<br /><input type="checkbox" name="max_hop" value="-m" /> Max time-to-live<input type="text" name="max_hop_value" value="30" size="3" maxlength="3" /><br /><input type="checkbox" name="wait_time" value="-w" /> Seconds to wait for response<input type="text" name="wait_time_value" value="2" size="2" maxlength="2" /><br /><input type="checkbox" name="number_query" value="-q" /> Number of Queries<input type="text" name="number_query_value" value="3" size="2" maxlength="2" /><br /><input type="checkbox" name="number_out" value="TRUE" /> Number of Time Outs<input type="text" name="number_out_value" value="3" size="2" maxlength="2" /><p /><input type="submit" name="Submit" value="Submit" /> <input type="button" name="Abort" value="Abort" onclick="Reset()" /> <input type="submit" name=".defaults" value="Clear Form" /> <input type="hidden" name=".cgifields" value="number_query" /><input type="hidden" name=".cgifields" value="wait_time" /><input type="hidden" name=".cgifields" value="numeric_address" /><input type="hidden" name=".cgifields" value="number_out" /><input type="hidden" name=".cgifields" value="max_hop" /></form><hr /><br /> 1  acar-atg-01-vlan675 (140.142.15.4)  0.343 ms  0.262 ms  0.279 ms
+<br /> 2  uwcr-atg-01-vlan3854 (205.175.109.17)  0.300 ms  0.244 ms  0.227 ms
+<br /> 3  uwcr-atg-01-vlan1879 (205.175.102.117)  0.324 ms  0.304 ms  0.293 ms
+<br /> 4  uwbr-ads-01-vlan1852 (205.175.102.10)  0.340 ms  0.435 ms  0.344 ms
+<br /> 5  iccr-sttlwa01-02-ge-2-2-0-4000.infra.pnw-gigapop.net (209.124.188.132)  0.512 ms  0.506 ms  0.450 ms
+<br /> 6  prs1-wes1-ge-0-1-0-801.pnw-gigapop.net (209.124.179.42)  0.614 ms  0.465 ms  0.498 ms
+<br /> 7  att-pwave-1.peer.pnw-gigapop.net (209.124.179.41)  0.552 ms  0.454 ms  0.428 ms
+<br /> 8  12.127.6.201 (12.127.6.201)  32.556 ms  32.968 ms  32.795 ms
+<br />     MPLS Label=32320 CoS=7 TTL=1 S=0
+<br /> 9  tbr2.sffca.ip.att.net (12.122.12.113)  34.520 ms  35.068 ms  34.735 ms
+<br />     MPLS Label=32280 CoS=7 TTL=1 S=0
+<br />10  tbr1.sffca.ip.att.net (12.122.9.137)  35.063 ms  35.224 ms  35.346 ms
+<br />     MPLS Label=31863 CoS=7 TTL=1 S=0
+<br />11  tbr1.la2ca.ip.att.net (12.122.10.26)  31.994 ms  31.956 ms  32.879 ms
+<br />     MPLS Label=32625 CoS=7 TTL=1 S=0
+<br />12  gar1.lsrca.ip.att.net (12.123.199.234)  34.335 ms  34.168 ms  34.172 ms
+<br />13  12.119.9.50 (12.119.9.50)  192.484 ms  192.122 ms  192.046 ms
+<br />14  219.158.8.218 (219.158.8.218)  196.884 ms  196.835 ms  196.964 ms
+<br />15  219.158.7.253 (219.158.7.253)  234.604 ms  234.882 ms  234.502 ms
+<br />16  219.158.7.254 (219.158.7.254)  253.872 ms  254.034 ms  254.062 ms
+<br />17  202.99.66.170 (202.99.66.170)  250.598 ms  250.751 ms  250.525 ms
+<br />18  60.28.31.126 (60.28.31.126)  254.043 ms  253.969 ms  254.024 ms
+<br />19  60.28.31.106 (60.28.31.106)  255.453 ms  255.530 ms  255.540 ms
+<br />20  60.28.171.18 (60.28.171.18)  254.781 ms  254.779 ms  255.023 ms
+<br />21  * * *
+<br />22  * * *
+<br />23  * * *
+<br />24  * * *
+<br />25  * * *
+<br />26  * * *
+<br />27  * * *
+<br />28  * * *
+<br />29  * * *
+<br />30  * * *
+<H1>TRACE COMPLETE</H1><P><A HREF="/uwnet/">UW Network Topology</A>--a description of the UW network infrastructure</P>
+
+<div id="footer"><div id="footerseal">
+<a href="http://www.washington.edu/"><img src="/home/graphics/blockw.gif" width="53" height="37" alt="UW Logo" /></a>
+</div>
+<div id="addressright"></div>
+<div id="address"><address><a href="http://depts.washington.edu/cac/">Computing &amp; Communications</a><BR>
+<a href="/computing/help/">Send a question to C&amp;C</a><br />
+Modified: August 7, 2007
+</address>
+</div>
+</div>
+
+</body>
+</html>
+
+

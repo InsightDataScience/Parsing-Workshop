@@ -1,0 +1,175 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="Pragma" content="no-cache">
+ <meta http-equiv="Cache-Control" content="no-cache">
+ <title> IP Network Performance - Router to Host Traceroute </title>
+ <link href="http://www.globalcrossing.com/styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor=#FFFFFF leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr valign="top">
+  <td>
+   <table width="100%" border="0" cellspacing="0" cellpadding="8" vspace="0" hspace="0">
+    <tr>
+     <td width="10%"><img src="/images/gc_logo.gif" alt="Global Crossing" vspace="0" hspace="0"></td>
+    </tr>
+   </table>
+
+   <table width="100%" vspace="0" hspace="0" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td bgcolor="000000"  height="18" align="right"><img src="/images/spacer.gif" width=1 height=1></td>
+    </tr>
+    <tr>
+     <td bgcolor="3366FF"  height="7" align="right"><img src="/images/spacer.gif" width=1 height=1></td>
+    </tr>
+   </table> 
+
+   <center>
+    <table width="75%" border="0">
+     <tr valign="bottom">
+      <td>
+       <font size=2>
+       <center>
+       <font size=+1>
+       <b><u>IP Network Performance</u></b>
+       </font>
+       </center>
+
+
+				<center>
+				<b><u>Looking Glass Utilities - Router to Host Traceroute</u></b>
+				<br>
+				<font size=2>
+				Allows a user to view all router hops encountered in
+				the path between a Global Crossing node and a specified
+				URL address
+				</font>
+				</center>
+			<form method=get action="/dotcom/link7r.shtml">
+<br>Choose a source:<br>
+<select name=src size=1>
+<option value="AMS2">Amsterdam, NL
+<option value="ATL1">Atlanta, Georgia
+<option value="PTY1">Balboa, Panama
+<option value="BBS1">Basingstoke, Chineham Park, UK
+<option value="BOS1">Boston, MA, US
+<option value="EZE1">Buenos Aires, AR
+<option value="CHI1">Chicago, IL, US
+<option value="CLE1" selected>Cleveland, OH, US
+<option value="CPH1">Copenhagen, DK
+<option value="DAL1">Dallas, TX, US
+<option value="DEN2">Denver, CO, US
+<option value="FRA2">Frankfurt, DE
+<option value="CLK1">Hong Kong, China
+<option value="HOU1">Houston, TX
+<option value="KCY1">Kansas City, MO, US
+<option value="LON3">London, UK
+<option value="LAX1">Los Angeles, CA, US
+<option value="MAD1">Madrid, Spain
+<option value="MEX1">Mexico City, MX
+<option value="MIA1">Miami, FL, US
+<option value="LIN1">Milan, Italy
+<option value="MIN1">Minneapolis, Minnesota
+<option value="JFK1">New York, NY, US (#2)
+<option value="PAO2">Palo Alto, CA, US
+<option value="CDG2">Paris, FR
+<option value="PHI1">Philadelphia, PA, US
+<option value="PHX1">Phoenix, AZ, US
+<option value="SAC1">Sacramento, California
+<option value="SAN1">San Diego, CA, US
+<option value="SFO1">San Francisco, CA, US
+<option value="SJC2">San Jose, California
+<option value="GRU1">Sao Paulo, BR
+<option value="SEA1">Seattle, WA, US
+<option value="WSH1">Shirley, NY, US
+<option value="QPG1">Singapore, Singapore
+<option value="SNV2">Sunnyvale, CA, US (#1)
+<option value="RSE1">Sydney, Australia
+<option value="TPA1">Tampa, FL, US
+<option value="TYO1">Tokyo, Japan
+<option value="WDC2">Washington DC, US
+<option value="ZRH1">Zurich, Switzerland
+</select>
+&nbsp;<br>&nbsp;<br>
+Specify a destination host
+<br><i>( ie. www.globalcrossing.com )</i><br>
+<input type=hidden name=mode value=r2h>
+<input name=dst value="202.108.22.44"><br>
+<input type=hidden name=type value="trace">
+<input type=submit value="start my query"><br>
+</form>
+
+
+       </font>
+      </td>
+     </tr>
+    </table>
+   </center>
+ 
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr align="center">
+     <td background="/images/line.lrII.jpg"><img src="/images/line.lrII.jpg" width="100%" height="1"></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<br><br>
+ 
+
+			<div style="padding-left: 4em;">
+		
+			Trying trace from node 'Cleveland, OH, US' to '202.108.22.44'<br><br>
+		<br>&nbsp;&nbsp;&nbsp;&nbsp; 1   fe0-1-0-202-100M.ar1.cle1.gblx.net (64.214.8.97)   0.667 ms  0.490 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 2   te2-1-10g.ar5.NYC1.gblx.net (67.17.108.242)   12.153 ms  12.112 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 3   sprint-1.ar3.NYC1.gblx.net (208.51.134.26)   12.053 ms  11.971 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 4   sl-crs2-nyc-0-8-0-0.sprintlink.net (144.232.7.36)   12.650 ms  12.661 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 5   sl-bb26-pen-4-0-0.sprintlink.net (144.232.20.142)   18.791 ms  19.370 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 6   sl-bb25-pen-15-0.sprintlink.net (144.232.16.89)   19.042 ms  19.016 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 7   sl-crs2-stk-0-12-0-2.sprintlink.net (144.232.20.112)   72.377 ms  72.433 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 8   sl-bb24-sj-9-0.sprintlink.net (144.232.20.181)   70.957 ms  70.526 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 9   sl-bb20-ana-1-0.sprintlink.net (144.232.9.92)   80.717 ms  81.884 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 10  sl-gw29-ana-0-0.sprintlink.net (144.232.1.146)   80.351 ms  80.553 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 11  sl-china6-4-0.sprintlink.net (144.232.54.74)   240.785 ms  240.801 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 12  219.158.4.50 (219.158.4.50)   267.410 ms  267.345 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 13  219.158.4.49 (219.158.4.49)   272.352 ms  272.216 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 14  202.96.12.38 (202.96.12.38)   272.068 ms  271.987 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 15  61.148.3.30 (61.148.3.30)   272.036 ms  272.212 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 16  202.106.48.18 (202.106.48.18)   272.191 ms  272.250 ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 17  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 18  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 19  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 20  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 21  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 22  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 23  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 24  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 25  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 26  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 27  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 28  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 29  * (*)   * ms  * ms
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 30  * (*)   * ms  * ms
+<br><br>
+Command completed<br>
+
+				<div style="width: 50%">
+				<br>
+				If a returned message contains or is completely composed of ***, this is
+				probably the result of a filtering device (i.e. firewall) encountered along
+				the path being traced.  The same explanation would apply for no output in
+				the case of a ping query.
+				<p>
+				<br>
+				</div>
+			
+			</div>
+		
+
+</body>
+</html>
+
+

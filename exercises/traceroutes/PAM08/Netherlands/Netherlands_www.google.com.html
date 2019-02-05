@@ -1,0 +1,42 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 72.14.253.103</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="72.14.253.103">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 72.14.253.103 (72.14.253.103), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  10.209 ms
+ 2  core2.m5.transip.net (80.69.67.221)  0.609 ms
+ 3  e1-0-3-3.0.flagtel.com (62.216.144.13)  2.028 ms
+ 4  so-1-2-0.0.cjr02.ldn001.flagtel.com (62.216.128.185)  24.293 ms
+ 5  so-1-3-0.0.cjr02.ldn004.flagtel.com (62.216.128.198)  23.476 ms
+ 6  195.66.224.125 (195.66.224.125)  23.323 ms
+ 7  209.85.252.40 (209.85.252.40)  23.726 ms
+ 8  66.249.95.146 (66.249.95.146)  96.651 ms
+ 9  209.85.251.233 (209.85.251.233)  126.446 ms
+10  72.14.232.96 (72.14.232.96)  178.424 ms
+11  66.249.95.210 (66.249.95.210)  182.023 ms
+12  72.14.239.12 (72.14.239.12)  193.587 ms
+13  216.239.46.203 (216.239.46.203)  178.372 ms
+14  72.14.233.18 (72.14.233.18)  194.017 ms
+15  po-in-f103.google.com (72.14.253.103)  183.263 ms
+		</pre></code>

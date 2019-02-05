@@ -1,0 +1,58 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 209.131.36.158</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing ................!.T
+<BR>
+TTL LFT trace to f1.www.vip.sp1.yahoo.com (209.131.36.158):80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 0.8ms
+<BR>
+ 2  [5056] ins-h4-et-1-11-118.desm.netins.net (167.142.56.196) 0.3ms
+<BR>
+ 3  [5056] ins-c4-et-1-3-0-114.desm.netins.net (167.142.56.98) 0.5ms
+<BR>
+ 4  [209] des-edge-01.inet.qwest.net (65.127.134.37) 18.0ms
+<BR>
+ 5  [209] des-core-02.inet.qwest.net (205.171.159.21) 16.7ms
+<BR>
+ 6  [209] cer-core-02.inet.qwest.net (205.171.205.78) 16.6ms
+<BR>
+ 7  [209] chp-brdr-02.inet.qwest.net (205.171.139.118) 23.7ms
+<BR>
+ 8  [209] 63.146.26.66 16.3ms
+<BR>
+ 9  [6453] if-1-0.core2.CT8-Chicago.teleglobe.net (66.110.14.177) 16.3ms
+<BR>
+10  [6453] if-0-1-0.core2.NTO-NewYork.teleglobe.net (66.110.14.22) 37.1ms
+<BR>
+11  [6453] if-1-0-0.core3.AEQ-Ashburn.teleglobe.net (216.6.51.5) 49.1ms
+<BR>
+12  [6453] ix-12-1.core3.AEQ-Ashburn.teleglobe.net (63.243.149.122) 40.6ms
+<BR>
+13  [10310] so-0-0-0.pat1.pao.yahoo.com (216.115.101.128) 94.3ms
+<BR>
+14  [10310] g-0-0-0-p150.msr2.sp1.yahoo.com (216.115.107.73) 93.5ms
+<BR>
+15  [36752] te-9-1.bas-a1.sp1.yahoo.com (209.131.32.23) 94.9ms
+<BR>
+<b>Timed out</b><BR></td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

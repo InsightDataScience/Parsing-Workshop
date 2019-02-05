@@ -1,0 +1,87 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="CSIM toolbox, (C) AIT'99, 2000, 2001">
+<META NAME="Author" CONTENT="Olivier Nicole"><title>Network test tools</title></head>
+<BODY BGCOLOR=#FFFFFF LINK=#007100 VLINK=#003600>
+<table width=100% cellspacing=0 border=0 cellpadding=8>
+<tr><td width=100% bgcolor=#d0ffd0 valign=middle><font size=+2><b>Network test tools</b></font></td></tr></table><br>
+<TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD valign=top width=90%>
+Use the tools below to test the network from AIT, CSIM to a location any location on Internet.<P><a href=http://www.cs.ait.ac.th/laboratory/network>Check network connectivity</a> for AIT.</td><TD ALIGN=RIGHT ROWSPAN=3 valign=top><A HREF=http://www.cs.ait.ac.th/index.shtml><IMG SRC="/images/csim-100.gif" ALT="CSIM Logo" NOSAVE BORDER=0></A> </TD><TD ALIGN=left  ROWSPAN=3 width=250 valign=top><A HREF=http://www.cs.ait.ac.th/welcome.shtml><IMG SRC="/images/barre-welcome.gif" ALIGN=top ALT="Welcome" border=0></A><A HREF="http://www.cs.ait.ac.th/course/"><IMG SRC="/images/barre-course.gif" ALIGN=top ALT="Courses" border=0></A><BR><A HREF="http://www.cs.ait.ac.th/csinfo/faculty.shtml"><IMG SRC="/images/barre-faculty.gif" ALIGN=top ALT="Faculty," border=0></A><A HREF="http://www.cs.ait.ac.th/student.shtml"><IMG SRC="/images/barre-student.gif" ALIGN=top ALT=" Student," border=0></A><IMG SRC="/images/barre-staff.gif" ALIGN=top ALT=" Staff" border=0><BR><A HREF="http://www.cs.ait.ac.th/project_report.shtml"><IMG SRC="/images/barre-project.gif" ALIGN=top ALT="Projects and reports" border=0></A><BR><A HREF="http://www.cs.ait.ac.th/conference.shtml"><IMG SRC="/images/barre-conference.gif" ALIGN=top ALT="Conferences, workshop and seminars" border=0></A><BR><A HREF=http://www.cs.ait.ac.th/laboratory><IMG SRC="/images/barre-lab.gif" ALIGN=top ALT="Laboratories and reasearch facilities" border=0></A><BR><A HREF="http://www.cs.ait.ac.th/related_info.shtml"><IMG SRC="/images/barre-related.gif" ALIGN=top ALT="Information related to CSIM" border=0></A><BR><A HREF="http://www.cs.ait.ac.th/nonrelated_info.shtml"><IMG SRC="/images/barre-non-related.gif" ALIGN=top ALT="Information non-related to CSIM" border=0></A><BR><IMG SRC="/images/barre-address.gif" ALIGN=top ALT="Address, map, phone, etc." border=0><form action=http://www.cs.ait.ac.th/cgi-bin/Search/xavatoria/search.pl method=GET><IMG SRC=/images/search.gif alt="Search"> <input type=hidden name=Range value=All><input type=hidden name=Format value=Standard><INPUT TYPE=text name=Terms size=8></FORM></td></tr></table><P><form method=get action=http://www.cs.ait.ac.th/cgi-bin/Net/net-test><table cellspacing=0 border=0 cellpadding=3><tr><td bgcolor=#d0ffd0>Host or IP address: </td><td><input name=addr type=text size=40 value=207.46.192.254></td></tr>
+<tr><td  bgcolor=#d0ffd0><input type=image src=/images/ping.gif alt=ping border=0 name=ping value=ping><br><input type=image src=/images/traceroute.gif alt=traceroute border=0 name=traceroute value=traceroute><br><input type=image src=/images/bing.gif alt=bin border=0 name=bing value=bing><br></td></tr></table></FORM><TT><B>/usr/sbin/traceroute 207.46.192.254</B></TT><P><xmp>
+traceroute to 207.46.192.254 (207.46.192.254), 64 hops max, 40 byte packets
+ 1  csrouter2 (192.41.170.23)  0.451 ms  0.609 ms  0.473 ms
+ 2  203.159.63.17 (203.159.63.17)  1.150 ms * *
+ 3  203.185.127.249 (203.185.127.249)  1.770 ms  1.313 ms  1.229 ms
+ 4  202.29.12.5 (202.29.12.5)  1.413 ms  1.436 ms  1.229 ms
+ 5  sg-so-06.bb-v4.noc.tein2.net (202.179.249.29)  116.099 ms  146.655 ms  116.011 ms
+ 6  sg.pr-v4.noc.tein2.net (202.179.249.22)  361.332 ms  281.333 ms  220.104 ms
+ 7  tpr4-10gi0-0-0-280.jp.apan.net (203.181.248.138)  231.145 ms  230.834 ms  231.575 ms
+ 8  starlight-tpr4.jp.apan.net (203.181.248.98)  374.311 ms  386.524 ms  377.895 ms
+ 9  216.24.184.21 (216.24.184.21)  375.233 ms  375.344 ms *
+10  denv-chic-36.layer3.nlr.net (216.24.186.5)  398.551 ms  398.496 ms  398.322 ms
+11  seat-denv-58.layer3.nlr.net (216.24.186.7)  424.411 ms  424.854 ms  424.490 ms
+12  microsoft-1-lo-jmb-706.sttlwa.pacificwave.net (207.231.240.7)  404.870 ms  404.935 ms  404.929 ms
+13  ge-7-3-0-46.wst-64cb-1a.ntwk.msn.net (207.46.46.194)  407.127 ms  406.409 ms  406.944 ms
+14  ge-6-1-0-0.tuk-64cb-1a.ntwk.msn.net (207.46.35.2)  402.645 ms  401.105 ms  402.515 ms
+15  ten1-2.tuk-76c-1b.ntwk.msn.net (207.46.41.94)  409.982 ms  410.152 ms  410.073 ms
+16  po15.tuk-65ns-mcs-1a.ntwk.msn.net (207.46.35.138)  410.634 ms  410.734 ms  410.318 ms
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+31  * * *
+32  * * *
+33  po15.tuk-65ns-mcs-1a.ntwk.msn.net (207.46.35.138)  410.428 ms !X * *
+34  * * *
+35  * * *
+36  * * *
+37  * * *
+38  * * *
+39  * * *
+40  * * *
+41  * * *
+42  * * *
+43  * * *
+44  * * *
+45  * * *
+46  * * *
+47  * * *
+48  * * *
+49  * * *
+50  * * *
+51  * * *
+52  * * *
+53  * * *
+54  * * *
+55  * * *
+56  * * *
+57  * * *
+58  * * *
+59  * * *
+60  * * *
+61  * * *
+62  * * *
+63  * * *
+64  * * *
+</xmp><P><table width=100% cellspacing=0 cellpadding=2 border=0>
+<tr><td align=center width=100% bgcolor=#d0ffd0><a href=http://www.cs.ait.ac.th/><img src=/images/home.gif border=0 alt="CSIM home page"></a><a href=https://wwws.cs.ait.ac.th/horde/imp/><img src=/images/wmail.gif border=0 alt="WMail"></a><a href=https://wwws.cs.ait.ac.th/cgi-bin/connect><img src=/images/acct_mgnt.gif border=0 alt="Account management"></a><a href=http://www.cs.ait.ac.th/openbiblio/opac/><img src=/images/library.gif border=0 alt="CSIM Library"></a><a href=http://www.cs.ait.ac.th/cgi-bin/mailsearch><img src=/images/searchdir.gif border=0 alt="Search CSIM directories"></a></td></tr></table><TABLE COLS=3 WIDTH=100% cellspacing=0 border=0 cellpadding=3>
+<TR>
+<TD width=30%>Contact us: <A HREF="mailto:on@cs.ait.ac.th">Olivier Nicole</A>
+<TD width=40% ALIGN=CENTER><A HREF="http://www.cs.ait.ac.th/"><IMG SRC=/images/csim50.GIF ALT=CSIM BORDER=0 align=middle></A>&nbsp;&nbsp;&nbsp;&nbsp;<a href=http://www.set.ait.ac.th/><img src=/images/set_w_50.gif border=0 align=middle alt=SET></a>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="http://www.ait.ac.th/"><IMG SRC=/images/ait50.GIF ALT=AIT BORDER=0 align=middle></A>
+<TD ALIGN=RIGHT width=30%>
+Page generated automatically</TABLE>
+</BODY>
+</HTML>

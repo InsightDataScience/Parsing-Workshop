@@ -1,0 +1,42 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 209.11.168.113</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing ...........T
+<BR>
+TTL LFT trace to 209.11.168.113:80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 0.9ms
+<BR>
+ 2  [5056] ins-h2-et-1-11-2.desm.netins.net (167.142.57.196) 0.3ms
+<BR>
+ 3  [5056] ins-c4-et-0-2-0-110.desm.netins.net (167.142.57.98) 0.6ms
+<BR>
+ 4  [209] des-edge-01.inet.qwest.net (65.127.134.37) 17.3ms
+<BR>
+ 5  [209] des-core-02.inet.qwest.net (205.171.159.21) 16.1ms
+<BR>
+ 6  [209] cer-core-02.inet.qwest.net (205.171.205.78) 16.3ms
+<BR>
+ 7  [209] chp-brdr-02.inet.qwest.net (205.171.139.118) 16.1ms
+<BR>
+<b>Timed out</b><BR></td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

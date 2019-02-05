@@ -1,0 +1,64 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 124.83.139.191</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing ...................T
+<BR>
+TTL LFT trace to f2.top.vip.ogk.yahoo.co.jp (124.83.139.191):80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 0.8ms
+<BR>
+ 2  [5056] ins-h2-et-1-11-2.desm.netins.net (167.142.57.196) 3.9ms
+<BR>
+ 3  [5056] ins-c4-et-0-2-0-110.desm.netins.net (167.142.57.98) 0.7ms
+<BR>
+ 4  [209] des-edge-01.inet.qwest.net (65.127.134.37) 16.0ms
+<BR>
+ 5  [209] des-core-01.inet.qwest.net (205.171.159.17) 16.1ms
+<BR>
+ 6  [209] kcm-core-02.inet.qwest.net (205.171.5.25) 30.1ms
+<BR>
+ 7  [AS?] svl-core-01.inet.qwest.net (67.14.12.58) 55.6ms
+<BR>
+ 8  [209] pax-brdr-02.inet.qwest.net (205.171.214.38) 55.9ms
+<BR>
+ 9  [2497] 216.98.100.225 56.1ms
+<BR>
+10  [2497] plt001bb01.IIJ.Net (216.98.96.229) 57.1ms
+<BR>
+11  [2497] lax002bb00.IIJ.Net (216.98.96.172) 63.4ms
+<BR>
+12  [2497] tky008bb00.IIJ.Net (216.98.96.184) 178.1ms
+<BR>
+13  [2497] osk004bb00.IIJ.Net (58.138.98.13) 170.4ms
+<BR>
+14  [2497] osk004ip51.IIJ.Net (58.138.106.178) 170.9ms
+<BR>
+15  [2497] 210.130.135.218 170.6ms
+<BR>
+16  [24572] 124.83.128.30 172.7ms
+<BR>
+17  [24572] 124.83.128.50 172.7ms
+<BR>
+18  [24572] [target] f2.top.vip.ogk.yahoo.co.jp (124.83.139.191):80 174.1ms
+<BR>
+</td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

@@ -1,0 +1,316 @@
+<HTML>
+<HEAD>
+</HEAD> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>XO. Network Diagnostic Tools</title>
+<link rel="stylesheet" type="text/css" href="/help/sitewide.css">
+
+
+
+</head>
+
+<body>
+<!-- BEGIN --> <!-- page is divided into 4 columns (Left Nav, spacer, Center Bar, & Main Body)-->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+
+<!-- begin COLUMN 1-Left Nav -->
+<td width="150" valign="top" class="bgLeftNav">
+<table border="0" cellspacing="0" cellpadding="0" width="150" nosave>
+<tr>
+<td valign="top" width="150" class="bgWhite"><a href="http://www.xo.com/index.html"><img src="http://www.xo.com/images/logo_xo.gif" alt="" width="150" height="106" border="0"></a></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<!-- begin LEFT NAV include -->
+<table border="0" cellspacing="0" cellpadding="0" width="150">
+<!--#include virtual="/includes/left_nav_xonetwork_diagnostic.html"-->
+<tr>
+<td class="leftNavLevel1"><a href="http://www.xo.com/index.html">Home</a></td>
+</tr>
+<tr>
+<td class="bgLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel1"><a href="http://www.xo.com/index.html">About XO</a></td>
+</tr>
+<tr>
+<td class="bgLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel1"><a href="http://www.xo.com/about/network/index.html">XO Network</a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNavDark"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel2"><a href="/cgi-bin/xostats/Login.pl">Login into XOstats </a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNavDark"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel2"><a href="/cgi-bin/xostats/diagtool-pub">Network Diagnostic Tools</a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel3"><a href="/cgi-bin/xostats/diagtool-pub/trace">Traceroute</a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel3"><a href="/cgi-bin/xostats/diagtool-pub/ping">Ping Test</a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel3"><a href="/cgi-bin/xostats/diagtool-pub/bgp">BGP Route</a></td>
+</tr>
+<tr>
+<td class="bgSeparatorLeftNav"><img src="http://www.xo.com/images/spacer.gif" alt="" width="150" height="1"></td>
+</tr>
+<tr>
+<td class="leftNavLevel3"><a href=/bandwidthmeter/meter.php>Bandwidth meter</a></td>
+</tr>
+<!--#include virtual="/includes/left_nav_button_productindex.html"--> 
+
+<tr>
+<td style="padding-top: 50px; padding-left: 10 px;">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td><img src="http://www.xo.com/images/spacer.gif" alt="" width="5" height="50"></td>
+</tr>
+</table>
+<!-- end LEFT NAV include -->
+</td>
+</tr>
+</table>
+</td>
+<!-- end COLUMN 1-Left Nav -->
+
+<!-- begin COLUMN 2-spacer -->
+<td width="1" valign="top"><img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="1"></td>
+<!-- end COLUMN 2-spacer Bar -->
+
+<!-- begin COLUMN 3-Center Bar -->
+<td valign="top" class="bgCenterBar">
+<table border="0" cellspacing="0" cellpadding="0" width="6">
+<tr>
+<td valign="top" align="left" width="6" class="bgWhite"><img src="http://www.xo.com/images/spacer.gif" alt="" width="6" height="66"></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="6" class="bgCenterBar"><img src="http://www.xo.com/images/spacer.gif" alt="" width="6" height="7"></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="6" class="bgCenterBar"><img src="http://www.xo.com/images/spacer.gif" alt="" width="6" height="1"></td>
+</tr>
+</table>
+</td>
+<!-- end COLUMN 3-Center Bar -->
+
+<!-- begin COLUMN 4-Main Body -->
+<td width="100%" valign="top">
+
+<!-- begin TOP NAV include -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+
+    <tr>
+  <td><img src="/images/spacer.gif" width="1" height="16"></td>
+</tr>
+<tr>
+	<td class="Search" align="center">
+    <form method="POST" action="http://answers.xo.com/xo/search.do" name="categoryList" onSubmit="return validateSearch()">
+    Type in your question here: <input type="text" size="20" name="searchText" class="searchButton"> search in:
+    <select name="category" class="searchButton" style="font-size: 9pt">
+        <OPTION VALUE="nulllink" SELECTED>Select a Category
+        <option value="/Topics/About XO">About XO</option>
+        <option value="/Topics/Products">Products</option>
+        <option value="/Topics/Support - Allegiance">Support - Allegiance</option>
+        <option value="/Topics/Support - XO">Support - XO</option>
+        <option value="/Topics/Other">Other</option>
+    </select>
+    <input type="submit" name="Submit" value="Find" class="searchButton">
+</form>
+
+	</td>
+</tr>
+		<tr valign="bottom" align="center">
+        	<td>
+              <table width="513" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="5"><img src="http://www.xo.com/images/spacer.gif" width="1" height="10"></td>
+              </tr>
+              <tr>
+<td>
+
+<table width="513" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+                   <td><a href="http://www.xo.com/products/"><img src="/images/navigation/june2003Nav/topnav_products.gif" width="75" height="18" alt="Products" border="0" id="productsImage" /></a></td>
+                   <td><a href="http://www.xo.com/products/carrier/"><img src="/images/navigation/june2003Nav/topnav_carriers.gif" width="71" height="18" alt="Carriers" border="0" id="carriersImage" /></a></td>
+                   <td><a href="http://www.xo.com/about/indirectsaleschannel/"><img src="/images/navigation/june2003Nav/topnav_agent.gif" width="65" height="18" alt="Agents" border="0" id="agentImage" /></a></td>
+                   <td><a href="http://www.xo.com/care/"><img src="/images/navigation/june2003Nav/topnav_customercare.gif" width="104" height="18" alt="Customer Care" border="0" id="careImage" /></a></td>
+                   <td><a href="http://www.xo.com/about/"><img src="/images/navigation/june2003Nav/topnav_aboutxo.gif" width="75" height="18" alt="About" border="0" id="aboutImage" /></a></td>
+                   <td><a href="http://www.xo.com/news/"><img src="/images/navigation/june2003Nav/topnav_news.gif" width="55" height="18" alt="News" border="0" id="newsImage" /></a></td>
+                   <td><a href="http://www.xo.com/contact/"><img src="/images/navigation/june2003Nav/topnav_contactxo.gif" width="85" height="18" alt="Contact" border="0" id="contactImage" /></a></td>
+        </tr>
+            		</table>
+
+</td>               </tr>             </table>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" class="bgCenterBar"><img src="http://www.xo.com/images/spacer.gif" alt="" width="593" height="7"></td>
+</tr>
+</table>
+<!-- end TOP NAV include -->
+
+<!-- begin MAIN BLOCK -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" valign="top">
+<!-- begin CONTENT -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<!-- title row -->
+<tr>
+<td colspan="3" height="55" style="background-image: url(http://www.xo.com/images/background_stripes.gif); background-repeat: repeat-y;">
+<h1>XO&#153; Network</h1>
+</td>
+</tr>
+<!-- top spacer row -->
+<tr>
+<td colspan="3" valign="top">
+<img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="24">
+</td>
+</tr>
+<!-- content body row -->
+<tr>
+<td width="32" valign="top"><img src="http://www.xo.com/images/spacer.gif" alt="" width="32" height="1"></td>
+<td width="100%" valign="top">
+<!-- begin CSS WARNING INCLUDE -->
+                  			<p style="display: none;"><font size="3" color="red"><b>WARNING:</b>
+                    		If you are seeing this message, it means that you have your
+                    		<b>Style Sheets turned off</b> or your <b>browser does not
+                    		support Style Sheets</b>. Please turn on your Style Sheets
+                    		or download a Web browser that supports Style Sheets.</font></p>
+                  			<!-- end CSS WARNING INCLUDE -->
+              				
+							<h2>Network Diagnostic Tools</h2>
+<h3>Traceroute</h3>
+<!-- Start New Form (Looking Glass) -->
+<FORM NAME=Looking Glass ACTION="/cgi-bin/xostats/diagtool-pub" METHOD="POST" >
+<input type=hidden name=screen value=TRACE ><table border=0 cols=2 width=100% cellpadding=0 cellspacing=0 class=form nosave><tr><th class=requireD>Core Node </th>
+<!-- Menu for  -->
+<td>
+<SELECT NAME=source SIZE=1 1>
+<OPTION VALUE="Atlanta">Atlanta
+<OPTION VALUE="Atlanta">Atlanta
+<OPTION VALUE="Chicago">Chicago
+<OPTION VALUE="Dallas">Dallas
+<OPTION VALUE="Denver">Denver
+<OPTION VALUE="Los Angeles">Los Angeles
+<OPTION VALUE="Miami">Miami
+<OPTION VALUE="New York">New York
+<OPTION VALUE="San Jose">San Jose
+<OPTION VALUE="Seattle">Seattle
+<OPTION VALUE="Washington DC">Washington DC
+</SELECT></TD>
+</tr>
+<!-- Text box for Destination -->
+<TR>
+<th class=required>Destination:</th>
+<TD><INPUT TYPE=text NAME=dest MAXLENGTH=35 SIZE=35 VALUE="69.5.88.74" onFocus="window.status='Please enter Destination'; return true;"></DIV></FONT></TD>
+</TR>
+
+<!-- Button for submit -->
+<tr><td colspan=2 class=submit><INPUT TYPE=submit NAME=submit VALUE="Get Results" > 
+               <INPUT TYPE=Reset VALUE="Reset"> </td>
+</tr>
+</TABLE>
+<!-- End of Table -->
+</FORM>
+<!-- End of Form -->
+<center><p> Note: Results can take 30-45 seconds to display... </p></center><h2>Results</h2> 
+<table border=0 cols=1 width=100% cellpadding=0 cellspacing=0 class=form><td ><pre><textarea class=TEXTAREA> traceroute 69.5.88.74 
+ 
+ Type escape sequence to abort.
+ Tracing the route to mail.megaupload.com (69.5.88.74)
+ 
+   1 ge5-3-0d4.RAR2.Atlanta-GA.us.xo.net (65.106.2.33) 4 msec 4 msec 4 msec
+   2 p1-0-0.RAR2.Washington-DC.us.xo.net (65.106.0.5) 12 msec 12 msec 16 msec
+   3 p1-0.ir1.ashburn-va.us.xo.net (65.106.3.138) 16 msec 16 msec 16 msec
+   4 206.111.0.110.ptr.us.xo.net (206.111.0.110) 16 msec 16 msec 16 msec
+   5 so-0-3-0.was11.ip.tiscali.net (213.200.80.109) 16 msec
+     so-2-2-0.was11.ip.tiscali.net (213.200.80.113) 16 msec 16 msec
+   6 carpathia-gw158-1.ip.tiscali.net (213.200.66.66) 164 msec 20 msec 16 msec
+   7 mail.megaupload.com (69.5.88.74) 20 msec 20 msec 16 msec
+   </textarea></pre></td></TABLE>
+<!-- End of Table -->
+<p><br><hr width="100%" size="1" noshade>
+<p class="disclaimer">XO reserves the right, in its sole discretion, to terminate the XO IP Network Performance Tool, or any feature of XO IP Network Performance Tool, at any time.</p>
+<p class="disclaimer">The statistics provided on these pages are not appropriate for Service Level Agreement (SLA) claims.</p>
+<p class="disclaimer">By using the XO IP Network Performance Tool, you agree to accept all responsibility and risk associated with the use of XO IP Network Performance services and the Internet generally.  XO disclaims all warranties, representations or other endorsements, express or implied, with regard to the information accessed from, or via, this tool, the systems which provide it and the Internet, including all warranties of merchantability or fitness for a particular use, or non-infringement of any third-party rights.  XO does not assume any liability for the completeness,accuracy or usefulness of any information disclosed or materials accessed.  In no event shall XO (or any persons or entities related thereto) be liable for any special, indirect, or consequential damages associated with or arising from use of this service in any way, including any loss of use, data or profits, regardless of the form of action.</p>
+<br><img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="5">
+
+</td>
+<td width="32" valign="top"><img src="http://www.xo.com/images/spacer.gif" alt="" width="32" height="1"></td>
+</tr>
+<!-- bottom spacer row -->
+<tr>
+<td colspan="3">
+<img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="32">
+</td>
+</tr>
+</table>
+<!-- end CONTENT -->
+
+</td>
+</tr>
+</table>
+<!-- end MAIN BLOCK -->
+
+</td>
+<!-- end COLUMN 4-Main Body -->
+
+</tr>
+<!-- begin BOTTOM NAV -->
+
+
+<tr>
+<td class="White" colspan="4"><img src="http://www.xo.com/images/spacer.gif" alt="" width="750" height="1"></td>
+</tr>
+
+<tr>
+<td class="bottomNavLeft"><img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="1"></td>
+<td class="White"><img src="http://www.xo.com/images/spacer.gif" alt="" width="1" height="1"></td>
+<td class="bottomNavRight" colspan="2"><img src="http://www.xo.com/images/spacer.gif" alt="" width="593" height="7"></td>
+</tr>
+
+<tr>
+<td colspan="4">
+  <table width="100%">
+  <tr>
+  <td class="bottomNavCopyright"><span class="disclaimer">&#169; Copyright 2000-07 XO. All rights reserved.<br>XO and the XO design logo are trademarks of XO Communications, Inc.</span></td>
+  <td class="bottomNavCopyright" colspan="1" align="right"><span class="disclaimer"><a href="http://www.xo.com/legal/privacy.html">Privacy</a><img src="http://www.xo.com/images/separator_vert_legal.gif" alt="" width="1" height="15" hspace="5" align="middle"><a href="http://www.xo.com/legal/">Legal Info</a></span></td>
+  </tr>
+</table>
+</td>
+</tr>
+        </table>
+</td>
+</tr>
+<!-- end BOTTOM NAV -->
+
+</table>
+<!-- END -->
+
+</body>
+</html>

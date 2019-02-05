@@ -1,0 +1,42 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  0.590 ms  0.366 ms  0.394 ms
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.088 ms  1.308 ms  1.089 ms
+ 3  tge2-4-53.krs2-p2.mmx.se.sn.net (194.100.250.13)  2.612 ms  2.460 ms  2.461 ms
+ 4  tge1-2.bgt-peer2.mmx.se.sn.net (88.131.143.114)  2.476 ms  2.445 ms  2.616 ms
+ 5  xe-4-0-0.10G.albnxu7.ip.tele.dk (195.215.109.145)  3.461 ms  3.282 ms  3.305 ms
+ 6  pos0-0.2488M.albnxg1.ip.tele.dk (83.88.25.165)  3.583 ms  3.276 ms  3.582 ms
+ 7  pos6-0.2488M.nyk2nxg2.ip.tele.dk (83.88.26.6)  97.211 ms  97.550 ms  97.406 ms
+ 8  pos3-0.2488M.nyk2nxg1.ip.tele.dk (83.88.12.141)  110.776 ms  110.951 ms  111.011 ms
+ 9  * * *
+10  cr2-cr1.nym009.internap.net (66.79.146.198)  97.847 ms  98.468 ms  99.424 ms
+11  cr2.chg003.inappnet-49.cr2.nym009.internap.net (66.79.146.181)  119.839 ms  119.864 ms  119.992 ms
+12  cr1-cr2.chg003.internap.net (66.79.146.193)  121.460 ms  119.921 ms  119.955 ms
+13  cr1.sje007.inappnet-24.cr1.chg003.internap.net (66.79.146.133)  183.217 ms  183.107 ms  182.910 ms
+14  core4.sje.inappnet-28.cr1.sje007.internap.net (66.79.148.130)  170.597 ms  169.461 ms  170.130 ms
+15  border2.pc1-0-bbnet1.sje.pnap.net (66.151.144.5)  242.852 ms  196.731 ms  330.626 ms
+16  friendster-4a.border2.sje.pnap.net (66.151.139.42)  243.988 ms * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

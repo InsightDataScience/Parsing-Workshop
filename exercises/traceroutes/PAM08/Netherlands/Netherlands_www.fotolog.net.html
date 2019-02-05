@@ -1,0 +1,38 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 65.118.195.131</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="65.118.195.131">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 65.118.195.131 (65.118.195.131), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  0.578 ms
+ 2  adm-b3-geth1-1-1-100.telia.net (213.248.72.197)  0.687 ms
+ 3  adm-bb1-link.telia.net (80.91.254.126)  0.871 ms
+ 4  ldn-bb2-pos7-2-0.telia.net (213.248.65.157)  9.547 ms
+ 5  nyk-bb1-link.telia.net (213.248.65.98)  77.764 ms
+ 6  chi-bb1-pos6-0-0-0.telia.net (213.248.80.153)  100.047 ms
+ 7  qwest-ic-119103-chi-bb1.telia.net (213.248.85.30)  98.702 ms
+ 8  cer-core-02.inet.qwest.net (205.171.139.117)  97.043 ms
+ 9  *
+10  nyc-edge-01.inet.qwest.net (205.171.30.38)  111.070 ms
+11  65-118-195-131.dia.static.qwest.net (65.118.195.131)  109.198 ms
+		</pre></code>

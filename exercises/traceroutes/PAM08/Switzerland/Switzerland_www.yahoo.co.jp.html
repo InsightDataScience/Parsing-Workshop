@@ -1,0 +1,59 @@
+<html>
+<head><title>IP-Plus</title></head>
+<link rel="stylesheet" href="../style.css" type="text/css">
+<body>
+
+<table width=608 border=0 cellspacing=0 cellpadding=0 summary="">
+<tr><td width=468 valign="top">    
+<table width=468 border=0 cellspacing=0 cellpadding=0>
+<tr><td class="title">IP-Plus Traceroute Server</td>
+</tr>
+<tr><td><img src="/images/spacer.gif" width=1 height=20 border=0></td></tr>
+<tr><td>
+<form name="main"><input type=hidden name=what value=>
+<table  cellspacing="0" cellpadding="4" width="468" class="blueFrame">
+<tr class="darkblue"><td colspan="2">Traceroute</td></tr>
+<tr><td></td></tr>
+ <tr>
+    <td  width="160"><b>Host</b></td>
+    <td width="308">
+        <input type="text" name="name" size="45" value=124.83.167.212>
+    </td>
+  </tr>
+  
+   <tr><td><input type=hidden name=action value=process></td></tr>
+ <tr><td>
+ <span class="button"><a href="#" onclick="document.main.submit(); return false;" onmouseover="window.status='Submit'; return true" onmouseout="window.status=''; return true">Submit</a></span>
+  </td></tr> 
+  <tr><td>&nbsp;</td></tr>
+ </table>
+</form>
+</td></tr></table>
+</td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+</tr>
+</table>
+
+<pre>
+ 1  164.128.248.1 (164.128.248.1)  0.580 ms  0.406 ms  0.646 ms
+ 2  164.128.248.12 (164.128.248.12)  0.705 ms  1.238 ms  0.704 ms
+ 3  i79zhh-005-gig10-1.bb.ip-plus.net (138.187.131.225)  1.425 ms  1.613 ms  1.439 ms
+ 4  i00nye-005-pos1-0.bb.ip-plus.net (138.187.159.54)  82.570 ms  81.645 ms  81.614 ms
+ 5  i00pao-005-pos4-0.bb.ip-plus.net (138.187.159.18)  156.330 ms  156.318 ms  156.446 ms
+ 6  paloalto0.iij.net (198.32.176.24)  158.407 ms  158.978 ms  158.604 ms
+ 7  216.98.96.233 (216.98.96.233)  157.621 ms  156.717 ms  156.698 ms
+ 8  216.98.96.153 (216.98.96.153)  160.540 ms  159.723 ms  159.763 ms
+ 9  216.98.96.163 (216.98.96.163)  157.808 ms  157.727 ms 216.98.97.146 (216.98.97.146)  160.113 ms
+10  216.98.96.186 (216.98.96.186)  258.143 ms  258.501 ms  257.948 ms
+11  58.138.106.182 (58.138.106.182)  260.475 ms  260.018 ms  260.073 ms
+12  210.130.135.218 (210.130.135.218)  258.461 ms  258.182 ms  258.084 ms
+13  124.83.128.30 (124.83.128.30)  260.648 ms  261.328 ms  260.503 ms
+14  124.83.128.90 (124.83.128.90)  272.886 ms  274.252 ms  273.297 ms
+15  * 124.83.128.90 (124.83.128.90)  273.612 ms !X *
+16  124.83.128.90 (124.83.128.90)  273.015 ms !X * *
+17  124.83.128.90 (124.83.128.90)  273.929 ms !X * *
+18  124.83.128.90 (124.83.128.90)  272.929 ms !X *  273.137 ms !X
+<pre>
+</body>
+</html>

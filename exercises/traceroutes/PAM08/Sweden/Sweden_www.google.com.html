@@ -1,0 +1,27 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  1.153 ms  0.500 ms  0.393 ms
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.228 ms  1.330 ms  1.232 ms
+ 3  tge2-3-54.ign-p2.got.se.sn.net (194.100.250.21)  31.926 ms  32.035 ms  31.786 ms
+ 4  ge2-1.th2-peer1.lon.se.sn.net (213.88.255.102)  31.924 ms  31.890 ms  32.064 ms
+ 5  195.66.224.125 (195.66.224.125)  33.033 ms  31.870 ms  31.924 ms
+ 6  209.85.252.40 (209.85.252.40)  31.925 ms  32.028 ms  32.065 ms
+ 7  72.14.236.216 (72.14.236.216)  99.675 ms  99.670 ms  99.531 ms
+ 8  216.239.46.227 (216.239.46.227)  124.290 ms  144.732 ms  124.354 ms
+ 9  72.14.232.96 (72.14.232.96)  167.039 ms  166.951 ms  166.870 ms
+10  72.14.233.56 (72.14.233.56)  171.963 ms * 66.249.95.210 (66.249.95.210)  170.898 ms
+11  72.14.233.52 (72.14.233.52)  171.365 ms 72.14.233.45 (72.14.233.45)  185.206 ms  208.029 ms
+12  72.14.233.54 (72.14.233.54)  173.854 ms  173.163 ms 72.14.233.45 (72.14.233.45)  177.793 ms
+13  72.14.233.27 (72.14.233.27)  176.901 ms 72.14.233.18 (72.14.233.18)  183.570 ms 216.239.47.50 (216.239.47.50)  195.505 ms
+14  72.14.233.18 (72.14.233.18)  177.026 ms 216.239.47.50 (216.239.47.50)  177.287 ms 72.14.233.14 (72.14.233.14)  177.720 ms
+15  po-in-f104.google.com (72.14.253.104)  177.423 ms 72.14.233.27 (72.14.233.27)  180.481 ms  180.405 ms
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

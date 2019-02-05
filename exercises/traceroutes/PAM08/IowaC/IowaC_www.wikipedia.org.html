@@ -1,0 +1,66 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 66.230.200.100</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing ....................T
+<BR>
+TTL LFT trace to rr.pmtpa.wikimedia.org (66.230.200.100):80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 0.9ms
+<BR>
+ 2  [5056] ins-h4-et-1-11-118.desm.netins.net (167.142.56.196) 0.4ms
+<BR>
+ 3  [5056] ins-h3-1-20-131.kmrr.netins.net (167.142.56.113) 7.6ms
+<BR>
+ 4  [5056] ins-c3-et-1-0-0-123.kmrr.netins.net (167.142.56.118) 7.7ms
+<BR>
+ 5  [701] POS3-2.GW4.KCY4.ALTER.NET (65.206.179.85) 19.3ms
+<BR>
+ 6  [701] 0.so-0-3-3.XL1.KCY4.ALTER.NET (152.63.88.210) 19.7ms
+<BR>
+ 7  [701] 0.so-1-2-0.XT3.DFW9.ALTER.NET (152.63.0.46) 40.0ms
+<BR>
+ 8  [701] 0.so-6-0-0.BR6.DFW9.ALTER.NET (152.63.99.2) 40.3ms
+<BR>
+ 9  [1239] sl-st21-dal-15-3.sprintlink.net (144.232.9.133) 40.0ms
+<BR>
+10  [1239] sl-bb20-fw-6-0.sprintlink.net (144.232.20.80) 41.8ms
+<BR>
+11  [1239] sl-bb27-fw-11-0.sprintlink.net (144.232.11.14) 40.2ms
+<BR>
+12  [1239] sl-bb22-fw-12-0.sprintlink.net (144.232.11.34) 40.1ms
+<BR>
+13  [1239] sl-bb25-atl-6-0.sprintlink.net (144.232.8.20) 44.7ms
+<BR>
+14  [1239] sl-bb23-atl-14-0.sprintlink.net (144.232.12.1) 81.6ms
+<BR>
+15  [1239] sl-gw25-atl-14-0-0.sprintlink.net (144.232.22.10) 44.8ms
+<BR>
+16  [1239] sl-timewarner-16-0.sprintlink.net (144.223.47.110) 53.6ms
+<BR>
+17  [4323] 66.192.247.211 76.7ms
+<BR>
+18  [4323] ge8-13.csw5-pmtpa.wikimedia.org (66.193.50.242) 80.7ms
+<BR>
+19  [14907] [target] rr.pmtpa.wikimedia.org (66.230.200.100):80 81.0ms
+<BR>
+</td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

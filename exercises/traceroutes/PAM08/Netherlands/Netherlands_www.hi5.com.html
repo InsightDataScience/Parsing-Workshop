@@ -1,0 +1,40 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 204.13.51.244</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="204.13.51.244">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 204.13.51.244 (204.13.51.244), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  0.997 ms
+ 2  adm-b3-geth1-1-1-100.telia.net (213.248.72.197)  0.754 ms
+ 3  adm-bb1-link.telia.net (80.91.254.126)  1.828 ms
+ 4  adm-b1-link.telia.net (80.91.254.7)  2.103 ms
+ 5  p16-0-0-0.r23.amstnl02.nl.bb.gin.ntt.net (129.250.9.221)  9.664 ms
+ 6  p64-1-1-0.r20.asbnva01.us.bb.gin.ntt.net (129.250.3.252)  98.469 ms
+ 7  as-0.r20.snjsca04.us.bb.gin.ntt.net (129.250.4.21)  209.572 ms
+ 8  ae-1.r21.plalca01.us.bb.gin.ntt.net (129.250.5.32)  175.140 ms
+ 9  xe-4-1.r04.plalca01.us.bb.gin.ntt.net (129.250.4.122)  174.897 ms
+10  ge-3-2.r02.snjsca04.us.ce.gin.ntt.net (128.241.219.34)  176.049 ms
+11  Ge3-2-Cr01-365m-SFO.unwiredltd.net (204.11.106.41)  176.949 ms
+12  204.11.104.54 (204.11.104.54)  179.332 ms
+13  204.13.51.244 (204.13.51.244)  177.213 ms
+		</pre></code>

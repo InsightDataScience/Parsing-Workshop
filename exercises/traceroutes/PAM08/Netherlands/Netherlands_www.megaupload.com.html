@@ -1,0 +1,35 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 69.5.88.74</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="69.5.88.74">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 69.5.88.74 (69.5.88.74), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  0.598 ms
+ 2  core2.m5.transip.net (80.69.67.221)  0.431 ms
+ 3  e1-0-3-3.0.flagtel.com (62.216.144.13)  2.029 ms
+ 4  so-1-2-0.0.cjr02.ldn001.flagtel.com (62.216.128.185)  23.791 ms
+ 5  so-5-1-0.0.cjr02.ldn004.flagtel.com (62.216.129.150)  23.642 ms
+ 6  so-2-1-0.0.cjr01.nyc005.flagtel.com (62.216.128.150)  149.388 ms
+ 7  ashb.ge-0-1-0-5.bdr1.cirn.net (206.223.115.135)  107.966 ms
+ 8  mail.megaupload.com (69.5.88.74)  107.309 ms
+		</pre></code>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to  (204.13.51.244)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.861 ms  0.842 ms  0.722 ms
+<br> 2  commodore (213.169.64.42)  0.468 ms  0.501 ms  0.350 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  0.878 ms  0.598 ms  1.200 ms
+<br> 4  its.demark.digiarea.net (194.246.120.14)  1.486 ms  1.891 ms  1.159 ms
+<br> 5  so-2-0-0-zpr1.dcx.cw.net (62.208.252.73)  38.646 ms  38.362 ms  38.956 ms
+<br> 6  ge-6-0-0-101-dcr1.fra.cw.net (62.208.242.107)  38.842 ms  43.505 ms  38.858 ms
+<br> 7  decix.mpd01.fra03.atlas.cogentco.com (80.81.192.63)  96.034 ms  46.778 ms  182.057 ms
+<br> 8  t1-1.ccr01.ams03.atlas.cogentco.com (130.117.1.162)  53.263 ms  53.296 ms  54.407 ms
+<br> 9  t3-1.mpd02.lon01.atlas.cogentco.com (130.117.1.38)  61.436 ms  63.172 ms  62.074 ms
+<br>10  t3-2.mpd01.bos01.atlas.cogentco.com (130.117.0.185)  136.300 ms  135.254 ms  135.559 ms
+<br>11  t7-2.mpd01.ord01.atlas.cogentco.com (154.54.6.154)  154.710 ms  155.602 ms  153.966 ms
+<br>12  t8-1.mpd01.sfo01.atlas.cogentco.com (154.54.7.138)  207.765 ms  304.807 ms  283.998 ms
+<br>13  t4-2.mpd01.sfo02.atlas.cogentco.com (154.54.3.122)  203.861 ms  203.791 ms  203.461 ms
+<br>14  38.101.48.78 (38.101.48.78)  208.570 ms  208.499 ms  208.405 ms
+<br>15  204.13.51.244 (204.13.51.244)  209.775 ms  209.665 ms  207.906 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>

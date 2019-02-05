@@ -1,0 +1,74 @@
+<title>traceroute from 134.117.14.35 (netmon.physics.carleton.ca) to  207.68.183.32 (207.68.183.32) for 136.159.17.51</title>
+<div align='center'><table border='1'>
+       <tr><td align='center'><a href='http://www.stanford.edu/'>
+        <img src='http://www.slac.stanford.edu/comp/net/wan-mon/stanford-seal.gif'
+           alt='Stanford University seal' title='Stanford University seal'></a>
+        <a href='/'><img src='http://www.slac.stanford.edu/icon/slac3.gif' 
+          alt='SLAC logo, click here to learn more about SLAC'
+          title='SLAC logo, click here to learn more about SLAC'      
+        ></a>
+      </td><td align='center'><h2>traceroute from 134.117.14.35 (netmon.physics.carleton.ca) to  207.68.183.32 (207.68.183.32) for 136.159.17.51</h2>
+CGI script maintainer: 
+       <a href='mailto:cottrell@slac.stanford.edu'><i>
+       Les Cottrell</i></a>, <a href='http://www.slac.stanford.edu/'>SLAC</a>. 
+       Script version 4.0, 5/13/06, Les Cottrell.<br>
+       <a href='http://www.slac.stanford.edu/comp/net/traceroute/traceroute.pl'>
+       Download perl source code</a>.<br><small>To perform a 
+       <!-- a href='http://boardwatch.internet.com/mag/96/dec/bwm38.html' -->
+        traceroute
+        from netmon.physics.carleton.ca, 
+        enter the desired target 
+       <a href='http://webopedia.internet.com/TERM/d/domain_name.html'>host.domain</a> 
+       (e.g. www.yahoo.com) or     
+       <a href='http://aol.pcwebopedia.com/TERM/I/IP_address.html'>Internet 
+       address</a> (e.g. 137.138.28.228) in the box
+       below:</small>
+       <form action='/cgi-bin/traceroute.pl' method='GET'>
+       Enter target name or address:
+       <input type='text' size='30' name='target'> then push 'Enter' key.
+       </form>Lookup: 
+       <a href='http://www.slac.stanford.edu/comp/net/util/nslookup.html'>host name</a> |
+       <a href='http://www.slac.stanford.edu/comp/net/util/mxlookup.html'>mail domain</a> |
+       <a href='http://www.networksolutions.com/cgi-bin/whois/whois'>domain name</a> |
+       <a href='http://cello.cs.uiuc.edu/cgi-bin/slamm/ip2ll/'>latitude & longitude</a> |
+       <a href='http://visualroute.visualware.com/'>visual traceroute</a> |
+       <a href='http://www.ietf.org/rfc/rfc2142.txt'>contacting someone</a>
+       </td><td><b>Related web sites</b><br><a href='http://www.slac.stanford.edu/comp/net/wan-mon/traceroute-srv.html'>
+        <b>Traceroute servers</b></a>,<br><a href='http://www.slac.stanford.edu/comp/net/wan-mon/tutorial.html'>
+        Monitoring tutorial</a>,<br><a href='http://www-iepm.slac.stanford.edu/'>
+        Internet monitoring</a><br><a href='http://www.ipaddressworld.com/'>What is my IP address?</a></tr></table></div>
+<table bgcolor='yellow'><tr><td align='center'><font color=red><b>
+Please note that traceroutes can appear similar 
+to port scans. If you see a suspected port scan alert, 
+for example from your firewall, with 
+a series of ports in the range 33434 - 33465, coming 
+from netmon.physics.carleton.ca it is probably a reverse traceroute from our 
+web based reverse traceroute server. Please do NOT report this to 
+us, it will almost certainly be a waste of both of our times. 
+For more on this see<br>
+<a href='http://www.slac.stanford.edu/comp/net/wan-mon/traceroute-srv.html#security'>
+Traceroute security issues</a>.</b></font></td></tr></table>
+<pre>
+traceroute: Warning: Multiple interfaces found; using 134.117.14.35 @ hme0
+traceroute to 207.68.183.32 (207.68.183.32), 30 hops max, 40 byte packets
+ 1  unix-gate.physics.carleton.ca (134.117.14.1)  1.327 ms  0.749 ms  0.706 ms
+ 2  10.50.254.3 (10.50.254.3)  0.662 ms  0.612 ms  0.594 ms
+ 3  10.30.34.1 (10.30.34.1)  0.719 ms  0.635 ms  0.643 ms
+ 4  10.30.53.1 (10.30.53.1)  0.853 ms  6.094 ms  1.341 ms
+ 5  134.117.254.241 (134.117.254.241)  0.907 ms  0.885 ms  0.917 ms
+ 6  10.30.56.19 (10.30.56.19)  1.500 ms 134.117.254.243 (134.117.254.243)  0.920 ms  6.187 ms
+ 7  10.30.56.1 (10.30.56.1)  2.005 ms  1.300 ms  1.324 ms
+ 8  fa0-1.na01.b011027-0.yyz02.atlas.cogentco.com (38.104.158.41)  10.894 ms  11.596 ms  10.338 ms
+ 9  g0-2.core01.yyz01.atlas.cogentco.com (66.250.14.229)  13.119 ms *  11.994 ms
+10  v3492.mpd01.yyz01.atlas.cogentco.com (154.54.5.81)  9.726 ms  28.705 ms  14.666 ms
+11  g3-0-0-3491.core01.yyz01.atlas.cogentco.com (154.54.5.77)  11.241 ms  22.891 ms  19.981 ms
+12  p4-0.core01.alb02.atlas.cogentco.com (66.28.4.217)  26.314 ms  18.942 ms  18.168 ms
+13  p5-0.core01.ymq02.atlas.cogentco.com (154.54.7.26)  25.658 ms  28.193 ms  26.923 ms
+14  t7-1.mpd01.ymq02.atlas.cogentco.com (154.54.7.22)  23.377 ms  26.786 ms  24.484 ms
+15  t7-3.mpd01.bos01.atlas.cogentco.com (154.54.7.57)  26.460 ms  26.247 ms  30.107 ms
+16  t2-3.ccr02.dca01.atlas.cogentco.com (154.54.6.138)  39.565 ms  43.464 ms  42.056 ms
+17  * t4-3.mpd01.dca02.atlas.cogentco.com (154.54.7.2)  38.473 ms  38.455 ms
+18  v3495.mpd01.iad01.atlas.cogentco.com (154.54.5.62)  40.263 ms  39.199 ms  44.217 ms
+19  ge5-1.edge1.ash1.us.msn.net (154.54.10.102)  42.604 ms  40.159 ms  40.829 ms
+20  ge-7-3-0-55.ash-64cb-1b.ntwk.msn.net (207.46.41.61)  38.459 ms  39.178 ms  38.000 ms
+21 

@@ -1,0 +1,36 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 195.122.131.250</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="195.122.131.250">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 195.122.131.250 (195.122.131.250), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  0.578 ms
+ 2  adm-b3-geth1-1-1-100.telia.net (213.248.72.197)  0.613 ms
+ 3  adm-bb1-link.telia.net (80.91.254.126)  0.912 ms
+ 4  adm-b1-link.telia.net (80.91.254.225)  0.762 ms
+ 5  ge-6-10.car2.Amsterdam1.Level3.net (213.244.165.249)  16.287 ms
+ 6  ae-0-53.mp1.Amsterdam1.Level3.net (4.68.120.65)  16.421 ms
+ 7  ae-1-0.bbr1.Frankfurt1.Level3.net (212.187.128.30)  24.578 ms
+ 8  ae-13-55.car3.Frankfurt1.Level3.net (4.68.118.145)  23.137 ms
+ 9  rapidshare.com (195.122.131.250)  27.692 ms
+		</pre></code>

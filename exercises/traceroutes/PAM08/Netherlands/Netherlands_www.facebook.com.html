@@ -1,0 +1,39 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>TransIP BV - Netwerk - Traceroute 204.15.20.26</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="/i/style40.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width=500><tr><td valign=top>
+	    <img src="/i/transip2.gif"></td><td width=10>&nbsp;</td><td valign=top>
+		<form action="trace.phpx" method="POST">
+	    U vindt hier het resultaat van uw traceroute-opdracht.<br>
+	    <input type=button onClick="window.close(); return false;" value=" Sluiten ">
+		<br>
+		<br>
+		<b>Nieuwe opdracht:</b><br>
+			<select name="cmd">
+				<option value="ping" >Ping</option>
+				<option value="traceroute" selected>Traceroute</option>
+			</select>
+			<input name="dest" value="204.15.20.26">
+			<input type="submit" value=" OK ">
+		</form>
+	    </td></tr></table>
+		<pre><code>traceroute to 204.15.20.26 (204.15.20.26), 30 hops max, 40 byte packets
+ 1  v867.m7i.transip.net (80.69.67.220)  3.672 ms
+ 2  adm-b3-geth1-1-1-100.telia.net (213.248.72.197)  0.632 ms
+ 3  adm-bb1-link.telia.net (80.91.254.126)  0.998 ms
+ 4  adm-b1-link.telia.net (80.91.254.225)  0.875 ms
+ 5  p16-0-0-0.r23.amstnl02.nl.bb.gin.ntt.net (129.250.9.221)  9.526 ms
+ 6  p64-1-1-0.r20.asbnva01.us.bb.gin.ntt.net (129.250.3.252)  97.758 ms
+ 7  as-0.r20.snjsca04.us.bb.gin.ntt.net (129.250.4.21)  169.440 ms
+ 8  ae-1.r21.plalca01.us.bb.gin.ntt.net (129.250.5.32)  169.798 ms
+ 9  xe-4-1.r04.plalca01.us.bb.gin.ntt.net (129.250.4.122)  169.956 ms
+10  xe-4-3.r04.plalca01.us.ce.gin.ntt.net (140.174.21.2)  169.613 ms
+11  v526.bsw01.sctm.tfbnw.net (204.15.21.125)  170.362 ms
+12  www-b.facebook.com (204.15.20.26)  178.148 ms
+		</pre></code>

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to pq-in-f87.google.com (209.85.141.87)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.934 ms  0.722 ms  0.623 ms
+<br> 2  commodore (213.169.64.42)  0.376 ms  0.382 ms  0.465 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  1.122 ms  1.287 ms  1.195 ms
+<br> 4  dga-lgw.sovam.net.ua (212.82.200.229)  1.248 ms  1.429 ms  1.521 ms
+<br> 5  so-9-3.hsa1.Frankfurt1.Level3.net (212.162.47.49)  37.127 ms  36.425 ms  36.501 ms
+<br> 6  so-9-3.hsa1.Frankfurt1.Level3.net (212.162.47.49)  37.444 ms  36.755 ms  37.515 ms
+<br> 7  ae-32-56.ebr2.Frankfurt1.Level3.net (4.68.118.190)  47.139 ms  37.368 ms  36.831 ms
+<br> 8  ae-1-100.ebr1.Frankfurt1.Level3.net (4.69.132.125)  43.207 ms  37.564 ms  51.510 ms
+<br> 9  ae-2.ebr2.Paris1.Level3.net (4.69.132.141)  55.977 ms  66.968 ms  55.604 ms
+<br>10  ae-5.ebr2.Washington1.Level3.net (4.69.132.113)  135.635 ms  127.217 ms  126.544 ms
+<br>11  ae-2.ebr3.Chicago1.Level3.net (4.69.132.69)  148.066 ms  159.317 ms  149.102 ms
+<br>12  ae-3.ebr2.Denver1.Level3.net (4.69.132.61)  182.347 ms  180.222 ms  180.174 ms
+<br>13  ae-2.ebr2.Seattle1.Level3.net (4.69.132.53)  199.903 ms  199.581 ms  198.177 ms
+<br>14  ae-21-56.car1.Seattle1.Level3.net (4.68.105.162)  334.231 ms ae-21-52.car1.Seattle1.Level3.net (4.68.105.34)  275.946 ms ae-21-54.car1.Seattle1.Level3.net (4.68.105.98)  285.463 ms
+<br>15  GOOGLE-INC.car1.Seattle1.Level3.net (4.79.104.74)  194.042 ms  227.866 ms  192.886 ms
+<br>16  66.249.95.210 (66.249.95.210)  197.759 ms  239.395 ms  197.011 ms
+<br>17  72.14.233.52 (72.14.233.52)  197.338 ms 72.14.232.137 (72.14.232.137)  197.228 ms  215.650 ms
+<br>18  72.14.233.45 (72.14.233.45)  199.168 ms  200.745 ms  199.037 ms
+<br>19  72.14.233.27 (72.14.233.27)  199.675 ms 72.14.233.45 (72.14.233.45)  199.781 ms  199.615 ms
+<br>20  216.239.47.58 (216.239.47.58)  206.881 ms 72.14.239.173 (72.14.239.173)  199.273 ms 216.239.47.58 (216.239.47.58)  210.367 ms
+<br>21  pq-in-f87.google.com (209.85.141.87)  199.367 ms  198.866 ms  200.038 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>

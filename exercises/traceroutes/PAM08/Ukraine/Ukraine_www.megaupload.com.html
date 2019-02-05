@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to hosted.by.cirn.net (69.5.88.76)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.894 ms  0.655 ms  0.650 ms
+<br> 2  commodore (213.169.64.42)  0.385 ms  0.375 ms  0.311 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  0.571 ms  0.673 ms  0.617 ms
+<br> 4  its.demark.digiarea.net (194.246.120.14)  1.995 ms  2.070 ms  1.829 ms
+<br> 5  so-2-0-0-zpr1.dcx.cw.net (62.208.252.73)  38.055 ms  38.194 ms  38.466 ms
+<br> 6  ge-6-0-0-100-dcr1.fra.cw.net (62.208.242.99)  38.403 ms  38.711 ms  92.694 ms
+<br> 7  so-3-0-0-dcr1.par.cw.net (195.2.9.153)  47.372 ms so-4-0-0-dcr1.par.cw.net (195.2.10.142)  47.167 ms so-3-0-0-dcr1.par.cw.net (195.2.9.153)  47.108 ms
+<br> 8  so-0-0-0-dcr1.was.cw.net (195.2.10.117)  127.696 ms  128.147 ms  127.306 ms
+<br> 9  so-0-0-0-dcr1.ash.cw.net (195.2.0.218)  136.654 ms  128.987 ms  128.348 ms
+<br>10  209.222.130.9 (209.222.130.9)  128.567 ms  136.790 ms  128.680 ms
+<br>11  hosted.by.cirn.net (69.5.88.76)  128.514 ms  136.763 ms  128.677 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>

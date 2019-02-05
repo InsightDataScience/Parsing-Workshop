@@ -1,0 +1,61 @@
+<html>
+<head><title>IP-Plus</title></head>
+<link rel="stylesheet" href="../style.css" type="text/css">
+<body>
+
+<table width=608 border=0 cellspacing=0 cellpadding=0 summary="">
+<tr><td width=468 valign="top">    
+<table width=468 border=0 cellspacing=0 cellpadding=0>
+<tr><td class="title">IP-Plus Traceroute Server</td>
+</tr>
+<tr><td><img src="/images/spacer.gif" width=1 height=20 border=0></td></tr>
+<tr><td>
+<form name="main"><input type=hidden name=what value=>
+<table  cellspacing="0" cellpadding="4" width="468" class="blueFrame">
+<tr class="darkblue"><td colspan="2">Traceroute</td></tr>
+<tr><td></td></tr>
+ <tr>
+    <td  width="160"><b>Host</b></td>
+    <td width="308">
+        <input type="text" name="name" size="45" value=209.11.168.113>
+    </td>
+  </tr>
+  
+   <tr><td><input type=hidden name=action value=process></td></tr>
+ <tr><td>
+ <span class="button"><a href="#" onclick="document.main.submit(); return false;" onmouseover="window.status='Submit'; return true" onmouseout="window.status=''; return true">Submit</a></span>
+  </td></tr> 
+  <tr><td>&nbsp;</td></tr>
+ </table>
+</form>
+</td></tr></table>
+</td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+<td width=120><img src="/images/spacer.gif" width=120 height=1 border=0></td>
+</tr>
+</table>
+
+<pre>
+ 1  164.128.248.1 (164.128.248.1)  0.509 ms  0.359 ms  0.327 ms
+ 2  164.128.248.12 (164.128.248.12)  0.661 ms  0.694 ms  1.098 ms
+ 3  i79zhh-005-gig10-1.bb.ip-plus.net (138.187.131.225)  1.297 ms  1.184 ms  1.312 ms
+ 4  i00nye-005-pos1-0.bb.ip-plus.net (138.187.159.54)  81.807 ms  81.667 ms  82.644 ms
+ 5  so-1-0.hsa2.NewYork1.Level3.net (64.152.45.197)  82.809 ms  81.743 ms  81.705 ms
+ 6  vlan52.csw2.NewYork1.Level3.net (4.68.97.62)  87.682 ms  92.132 ms  85.933 ms
+ 7  ae-72-72.ebr2.NewYork1.Level3.net (4.69.134.85)  93.956 ms  88.843 ms  90.300 ms
+ 8  ae-2.ebr1.Chicago1.Level3.net (4.69.132.65)  104.941 ms  105.703 ms  108.451 ms
+ 9  ae-68.ebr3.Chicago1.Level3.net (4.69.134.58)  115.469 ms  103.715 ms  103.757 ms
+10  ae-3.ebr2.Denver1.Level3.net (4.69.132.61)  126.496 ms  135.922 ms  126.697 ms
+11  ae-1-100.ebr1.Denver1.Level3.net (4.69.132.37)  128.059 ms  139.800 ms  126.850 ms
+12  ae-3.ebr2.SanJose1.Level3.net (4.69.132.57)  158.468 ms  158.683 ms  162.748 ms
+13  ae-4-4.car2.SanFrancisco1.Level3.net (4.69.133.157)  153.354 ms  153.076 ms  152.984 ms
+14  sf-gw1.quantcast.com (4.78.242.34)  169.766 ms  165.991 ms  172.720 ms
+15  customer-reverse-entry.208.96.31.80 (208.96.31.80)  172.387 ms  169.436 ms  165.673 ms
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+<pre>
+</body>
+</html>

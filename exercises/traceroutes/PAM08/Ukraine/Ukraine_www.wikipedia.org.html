@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to rr.pmtpa.wikimedia.org (66.230.200.100)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.760 ms  0.628 ms  0.548 ms
+<br> 2  commodore (213.169.64.42)  0.433 ms  0.321 ms  0.390 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  0.718 ms  0.513 ms  0.695 ms
+<br> 4  its.demark.digiarea.net (194.246.120.14)  15.947 ms  1.141 ms  219.075 ms
+<br> 5  so-2-0-0-zpr1.dcx.cw.net (62.208.252.73)  31.463 ms  31.522 ms  31.503 ms
+<br> 6  ge-6-0-0-101-dcr1.fra.cw.net (62.208.242.107)  32.157 ms  36.842 ms  32.356 ms
+<br> 7  so-4-0-0-dcr1.par.cw.net (195.2.10.142)  41.162 ms so-3-0-0-dcr1.par.cw.net (195.2.9.153)  40.620 ms so-4-0-0-dcr1.par.cw.net (195.2.10.142)  40.289 ms
+<br> 8  so-0-0-0-dcr1.was.cw.net (195.2.10.117)  121.513 ms  120.705 ms  121.557 ms
+<br> 9  so-0-0-0-dcr1.ash.cw.net (195.2.0.218)  122.043 ms  129.243 ms  121.376 ms
+<br>10  eqix.asbn.twtelecom.net (206.223.115.36)  121.435 ms  120.897 ms  120.667 ms
+<br>11  66.192.247.179 (66.192.247.179)  156.125 ms  156.540 ms  155.906 ms
+<br>12  ge8-13.csw5-pmtpa.wikimedia.org (66.193.50.242)  155.937 ms  155.216 ms  155.337 ms
+<br>13  rr.pmtpa.wikimedia.org (66.230.200.100)  155.544 ms  155.274 ms  155.275 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>

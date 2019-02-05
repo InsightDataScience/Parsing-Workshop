@@ -1,0 +1,68 @@
+<center><IMG SRC="http://netins.net/isp-im/netins-l.gif"><h2>netINS Looking Glass</h2></center><P>
+<center>Traceroute from rr.netins.net to 72.14.253.104</center><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Tracing .....................T
+<BR>
+TTL LFT trace to po-in-f104.google.com (72.14.253.104):80/tcp
+<BR>
+ 1  [5056] ins-pp1.desm.netins.net (167.142.225.250) 1.1ms
+<BR>
+ 2  [5056] ins-h4-et-1-11-118.desm.netins.net (167.142.56.196) 0.4ms
+<BR>
+ 3  [5056] ins-h3-1-20-131.kmrr.netins.net (167.142.56.113) 7.4ms
+<BR>
+ 4  [5056] ins-c3-et-1-0-0-123.kmrr.netins.net (167.142.56.118) 7.7ms
+<BR>
+ 5  [701] POS3-2.GW4.KCY4.ALTER.NET (65.206.179.85) 20.1ms
+<BR>
+ 6  [701] 0.so-0-3-3.XL1.KCY4.ALTER.NET (152.63.88.210) 19.8ms
+<BR>
+ 7  [701] 0.so-1-2-0.XT3.DFW9.ALTER.NET (152.63.0.46) 40.2ms
+<BR>
+ 8  [701] 0.so-6-0-0.BR6.DFW9.ALTER.NET (152.63.99.2) 40.1ms
+<BR>
+ 9  [701] 204.255.168.38 39.5ms
+<BR>
+10  [209] dal-core-01.inet.qwest.net (205.171.225.50) 41.2ms
+<BR>
+11  [AS?] sea-core-02.inet.qwest.net (67.14.32.18) 77.9ms
+<BR>
+12  [209] sea-edge-08.inet.qwest.net (205.171.26.78) 78.1ms
+<BR>
+13  [209] 65.121.106.86 78.2ms
+<BR>
+14  [15169] 72.14.233.57 94.6ms
+<BR>
+15  [15169] 66.249.95.210 81.6ms
+<BR>
+16  [15169] 72.14.233.52 81.7ms
+<BR>
+17  [15169] 72.14.233.37 86.1ms
+<BR>
+18  [15169] 72.14.233.23 84.3ms
+<BR>
+19  [15169] 72.14.233.14 87.6ms
+<BR>
+20  [15169] [target] po-in-f104.google.com (72.14.253.104):80 85.0ms
+<BR>
+</td></tr>
+</table>
+<HR width=50%><P><P>
+<table width="100%">
+<tr width=500>
+<td width="25%">&nbsp;</td>
+<td>
+Looking Glass Test
+<FORM action="lg.cgi" METHOD="POST">
+<P>
+<input type="radio" name="type" value="Traceroute" CHECKED>  Traceroute<P>
+<input type="radio" name="type" value="BGPLookup"> BGP Lookup <P>
+<input type="radio" name="type" value="Ping"> Ping
+&nbsp;&nbsp;Count:<SELECT NAME="Count"><option selected>5</option><option>10</option><option>20</option></SELECT><P>
+IP Address/Hostname: <input type="text" name="ipaddr">
+<input type="submit" value="Query">
+</td></tr>
+</table>

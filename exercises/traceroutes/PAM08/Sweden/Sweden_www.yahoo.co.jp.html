@@ -1,0 +1,33 @@
+<html><head><title>Traceroute Gateway</title></head><body bgcolor=white>
+<h1>Traceroute Gateway</h1>
+at <a href=http://xyz.pp.se/> XYZ</a>&nbsp<font size=-1>(other traceroute gateways at <a href="http://www.traceroute.org">www.traceroute.org</a>)</font><br><br>No luck tracing? Try ICMP/TCP instead. Note that not making a selection uses the default of UDP.<p>
+<a><p>
+
+<PRE><hr> 1  anake000br004.thalamus.net (212.31.160.254)  0.479 ms  0.365 ms *
+ 2  static-213.187.192.29.addr.tdcsong.se (213.187.192.29)  1.283 ms  1.158 ms  1.231 ms
+ 3  tge2-3-54.ign-p2.got.se.sn.net (194.100.250.21)  31.789 ms  31.755 ms  31.925 ms
+ 4  ge2-2.th2-peer1.lon.se.sn.net (213.88.255.86)  32.064 ms  31.894 ms  31.792 ms
+ 5  gsr12012.lon.he.net (195.66.224.21)  31.783 ms  32.291 ms  31.786 ms
+ 6  10gigabitethernet2-3.core1.nyc4.he.net (72.52.92.77)  100.230 ms  100.357 ms  100.569 ms
+ 7  10gigabitethernet3-1.core1.sjc2.he.net (72.52.92.25)  179.583 ms  179.918 ms  179.614 ms
+ 8  10gigabitethernet3-2.core1.pao1.he.net (72.52.92.69)  180.241 ms  180.338 ms  180.147 ms
+ 9  64.71.163.22 (64.71.163.22)  170.315 ms  170.281 ms  170.188 ms
+10  tyo-gw1-pos4-1.gw.odn.ad.jp (210.142.161.61)  294.070 ms  291.011 ms  291.201 ms
+11  tyork-05-pos12-0.gw.odn.ad.jp (210.142.161.77)  291.523 ms  291.546 ms  296.469 ms
+12  TYOrw-10T1-1.nw.odn.ad.jp (143.90.192.66)  291.876 ms  291.138 ms  291.170 ms
+13  214.211131233.odn.ne.jp (211.131.233.214)  291.239 ms  291.639 ms  291.210 ms
+14  124.83.128.26 (124.83.128.26)  293.421 ms  293.544 ms  293.431 ms
+15  124.83.128.42 (124.83.128.42)  307.113 ms  307.048 ms  313.757 ms
+16  * 124.83.128.42 (124.83.128.42)  307.431 ms !X *
+17  * * *
+18  124.83.128.42 (124.83.128.42)  307.210 ms !X * *
+19  * 124.83.128.42 (124.83.128.42)  311.270 ms !X *
+20  124.83.128.42 (124.83.128.42)  307.262 ms !X * *
+21  124.83.128.42 (124.83.128.42)  307.680 ms !X *  307.024 ms !X
+</PRE><hr><form>
+<input type="radio" name="type" value="1"> ICMP<br /><input type="radio" name="type" value="2"> TCP<br /><input type="radio" name="type" value="3"> UDP<br /><br />
+Please enter the IP address or the full name of the machine you want to traceroute to:<br><br>
+<font size=-2 color=white>
+<input name=t>
+<INPUT type="submit" value="Submit">
+</form>

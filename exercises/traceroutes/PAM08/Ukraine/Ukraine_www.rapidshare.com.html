@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to rapidshare.com (195.122.131.250)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.957 ms  0.625 ms  0.542 ms
+<br> 2  commodore (213.169.64.42)  0.432 ms  0.410 ms  0.284 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  0.581 ms  0.641 ms  0.581 ms
+<br> 4  dga-lgw.sovam.net.ua (212.82.200.229)  1.284 ms  1.874 ms  1.311 ms
+<br> 5  62.67.36.137 (62.67.36.137)  40.842 ms  40.819 ms  40.262 ms
+<br> 6  62.67.36.137 (62.67.36.137)  40.070 ms  40.563 ms  40.155 ms
+<br> 7  ae-13-55.car3.Frankfurt1.Level3.net (4.68.118.145)  41.423 ms  40.828 ms  40.777 ms
+<br> 8  rapidshare.com (195.122.131.250)  41.951 ms  42.112 ms  45.534 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>

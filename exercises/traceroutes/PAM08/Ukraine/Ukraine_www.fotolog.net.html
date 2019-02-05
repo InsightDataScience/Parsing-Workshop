@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Multi-Router Looking Glass for Zebra</title>
+</head>
+<body bgcolor=white>
+	
+<font face=arial size=3 color=blue>
+<h1>Looking Glass</h1>
+<br>
+
+<font color=black>
+<form METHOD="POST" action="http://lg.naverex.net/cgi-bin/mrlg.cgi">
+<B>Router:</B>  <SELECT Name="router" Size=1>
+<OPTION Value="nintendo.naverex.net">nintendo.naverex.net
+
+<OPTION Value="commodore.naverex.net">commodore.naverex.net
+</select>
+<br><br>
+<B>Query</B>:
+<br>
+<input type=radio name=query value=1>show ip bgp<br>
+<input type=radio name=query value=2>show ip route<br>
+<input type=radio name=query value=3>ping<br>
+<input type=radio name=query value=4>traceroute<br>
+<br>
+<B>Argument:</B> <input type=text name=arg length=20 maxlength=60>
+<input type="submit" value="Execute"></form>	
+<br>Type escape sequence to abort.<br>Tracing the route to 65-118-195-131.dia.static.qwest.net (65.118.195.131)<br><br>
+ 1  Nintendo-100M-1 (213.169.64.126)  0.744 ms  0.679 ms  0.561 ms
+<br> 2  commodore (213.169.64.42)  0.375 ms  0.572 ms  0.309 ms
+<br> 3  Ukrtel-Out (213.169.81.14)  0.597 ms  0.642 ms  0.969 ms
+<br> 4  its.demark.digiarea.net (194.246.120.14)  0.888 ms  0.842 ms  1.517 ms
+<br> 5  so-2-0-0.waw10.ip.tiscali.net (213.200.69.233)  14.322 ms  14.440 ms  14.820 ms
+<br> 6  so-2-0-0.was11.ip.tiscali.net (213.200.80.25)  129.507 ms  129.685 ms  129.252 ms
+<br> 7  dcp-brdr-01.inet.qwest.net (63.146.26.9)  129.115 ms dcp-brdr-01.inet.qwest.net (63.146.26.13)  129.053 ms dcp-brdr-01.inet.qwest.net (63.146.26.9)  130.115 ms
+<br> 8  dcx-core-01.inet.qwest.net (205.171.251.57)  129.189 ms  129.706 ms  130.115 ms
+<br> 9  jfk-core-02.inet.qwest.net (67.14.5.10)  134.692 ms  134.946 ms  135.000 ms
+<br>10  nyc-edge-01.inet.qwest.net (205.171.30.38)  135.261 ms  134.906 ms  134.985 ms
+<br>11  65-118-195-131.dia.static.qwest.net (65.118.195.131)  134.490 ms  135.775 ms  134.597 ms
+<br>
+<br><br>
+</font>
+<font color=blue face=arial size=2>
+<a href="http://www.naverex.net/">Navigator Online</a><br>
+</body>
+</html>
