@@ -83,4 +83,4 @@ More information on reading traceroutes can be found [here](http://www.exit109.c
     1. Which website had the highest success rate?
     2. Which website had the shortest median round trip time?
 4. Write a script that goes through all HTML files to determine:
-    1. Which webserver/website combo hat the shortest average round trip time?
+    1. Which webserver/website combo has the shortest average round trip time?
