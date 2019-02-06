@@ -72,15 +72,15 @@ More information on reading traceroutes can be found [here](http://www.exit109.c
 ## Exercises
 
 1. Write a script that, for a given HTML file, determines the following:
-  1. Was the traceroute successful?
-  2. What was the average round trip time?
-  3. How many hops were needed to complete the trip?
+    1. Was the traceroute successful?
+    2. What was the average round trip time?
+    3. How many hops were needed to complete the trip?
 2. Write a script that goes through all HTML files to determine:
-  1. Which server had the highest success rate?
-  2. Which server had the shortest average round trip time?
-  3. Which server had the lowest average number of hops?
+    1. Which server had the highest success rate?
+    2. Which server had the shortest average round trip time?
+    3. Which server had the lowest average number of hops?
 3. Write a script that goes through all HTML files to determine:
-  1. Which website had the highest success rate?
-  2. Which website had the shortest median round trip time?
+    1. Which website had the highest success rate?
+    2. Which website had the shortest median round trip time?
 4. Write a script that goes through all HTML files to determine:
-  1. Which webserver/website combo hat the shortest average round trip time?
+    1. Which webserver/website combo hat the shortest average round trip time?
