@@ -74,6 +74,7 @@ We will get started with a quick review of some of the most important commands. 
 #### sed
 
 ### Shell Scripting
+#### comments
 #### echo
 #### printf
 #### read
