@@ -6,6 +6,8 @@ This introduction is by no means comprehensive - refer to our [additional resour
 
 ## A walk through basic Bash commands
 
+We will get started with a quick review of some of the most important commands. We encourage you to test them out as you read through this your first time, but also use this as a cheat sheet later on.
+
 ### File operations
 #### cp
 #### mv
@@ -28,6 +30,7 @@ This introduction is by no means comprehensive - refer to our [additional resour
 
 ### Searching and Sorting
 #### grep
+#### fgrep
 #### sort
 #### uniq
 #### find
@@ -36,12 +39,52 @@ This introduction is by no means comprehensive - refer to our [additional resour
 #### which
 
 ### Compression
+#### (g)zip/(g)unzip
+#### tar
+
 ### System Information
+#### date
+#### cal
+#### uname
+#### time
+
 ### Process Management
+#### ps/jobs
+#### top
+#### kill
+#### &
+
+
 ### Users and Groups
+#### sudo/su
+#### whoami
+#### passwd
+#### groups
+
 ### Network
+#### ssh
+#### sftp
+#### scp
+#### wget
+#### curl
+
 ### RegExp
+#### Defining regular expressions
+#### egrep
+#### sed
+
 ### Shell Scripting
+#### echo
+#### printf
+#### read
+#### set, unset
+#### export
+#### let
+#### if
+#### [
+#### seq
+#### for
+#### while
 #### mapfile
 
 
