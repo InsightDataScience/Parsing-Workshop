@@ -1,6 +1,6 @@
 # Parsing-Workshop
 
-This is [Insight's](https://www.insightdevopsengineering.com) workshop to help our DevOps Fellows prepare for parsing interviews.
+This is [Insight's](https://www.insightdevops.com) workshop to help our DevOps Fellows prepare for parsing interviews.
 In this workshop, we cover Bash fundamentals (as well as awk, sed and the likes) as well as specific parsing modules in Python.
 The workshop is mostly exercise driven and thus only really useful if all exercises are completed.
 
