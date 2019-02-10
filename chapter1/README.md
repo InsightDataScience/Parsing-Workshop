@@ -66,11 +66,6 @@ The following commands are used for examining files and are often used when pars
 - Description: Outputs differences of `file1` and `file2` line by line.
 - Example: `diff lines.txt example.txt`
 
-### File Permissions
-#### chmod
-#### chown
-#### chgrp
-#### umask
 
 ### Searching and Sorting
 #### grep
@@ -82,15 +77,7 @@ The following commands are used for examining files and are often used when pars
 #### locate
 #### which
 
-### Compression
-#### (g)zip/(g)unzip
-#### tar
 
-### System Information
-#### date
-#### cal
-#### uname
-#### time
 
 ### Process Management
 #### ps/jobs
@@ -98,12 +85,6 @@ The following commands are used for examining files and are often used when pars
 #### kill
 #### &
 
-
-### Users and Groups
-#### sudo/su
-#### whoami
-#### passwd
-#### groups
 
 ### Network
 #### ssh
