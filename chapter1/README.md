@@ -130,15 +130,36 @@ These commands are the most basic to get you started understanding what is runni
 
 ### Network
 #### ssh
+- Syntax: `ssh ip-address`
+- Description: Attempts to establish an ssh connection to the given ip address.
+- Notable Options:
+  - `i`: Provide a private key for authentification.
+  - `p`: Set port to connect to.
 #### sftp
+- Syntax: `sftp ip-address`
+- Description: Stands for secure FTP. Uses the FTP protocol to transfer files. Starts an interactive session where you can transfer files between your machine and the ip address provided.
 #### scp
+- Syntax: `scp source destination`
+- Description: Stands for secure copy. Allows you to copy files between servers using ssh and has the same options as ssh for authentification.
 #### wget
+- Syntax: `wget http://website.com/files/file.zip`
+- Description: Allows you to download files, `wget` stands for web get.
 #### curl
+- Syntax: `curl website`
+- Description: Allows you to download the content of a webpage, or really, anything accessible on the web. Supports a wide variety of protocols.
+- Example: `curl google.com`
 
-### RegExp
-#### Defining regular expressions
-#### egrep
-#### sed
+### Regular Expressions
+Regular expressions are fundamental to efficient parsing. They allow you to define patterns that other tools, such as `grep`, `sed` or `awk` can use to process files.
+Explaining regular expressions in detail is beyond the scope of this workshop and, fortunately, there are lots of good resources out there.
+- [Action Item]: Read a [Brief Introduction to Regular Expressions](https://www.tldp.org/LDP/abs/html/x17129.html)
+
+#### Exercises:
+- Define a regular expression that:
+  - Matches `aad` and `aaad` but nothing else.
+  - Matches any email address of the shape `something@somethingcom`.
+  - Matches any IPv4 address.
+
 
 ### Shell Scripting
 #### comments
