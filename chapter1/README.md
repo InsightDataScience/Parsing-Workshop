@@ -162,18 +162,74 @@ Explaining regular expressions in detail is beyond the scope of this workshop an
 
 
 ### Shell Scripting
+Let us get serious and learn how to write more complex and longer scripts!
+To get started, we will review basic scripting constructs.
 #### comments
+A command line in a shell script starts with an `#`.
+Example:
+```
+# I will be ignored
+```
 #### echo
+- Syntax: `echo string`
+- Description: Writes `string` to the standard output. Sends a newline at the end of the output.
+- Example: `echo hello world`
 #### printf
+- Syntax: `printf string`
+- Description: Writes `string` to the standard output. Does not send a newline at the end of the output.
+- Example: `printf hello world`
 #### read
-#### set, unset
-#### export
-#### let
+- Syntax: `read variable_name(s)`
+- Description: Assignes standard input to variable names.
+- Example: ``` read var_name
+echo "Your name is: $var_name"
+```
+#### let and (())
+- Syntax: `let expression` or `((expression))`
+- Description: Both `let` and `(())` evaluate and arithmetic expression.
+- Example: `let "myvar = 5"; echo $myvar`
+- Example: `((myvar = 5)); echo $myvar`
 #### if
-#### [
+The classic if construct has the following syntax in Bash:
+```
+if [ "foo" = "foo" ]; then
+  echo expression evaluated as true
+fi
+```
+#### [ / test
+- Syntax: `test expression` or `[ expression ]`
+- Description: `test` evaluates the expression and, if it valuates to true,
+     returns a zero exit status, otherwise it returns 1.
+- [Action Item]: What is the difference between `[[ expression ]]` and `[ expression ]`?
 #### seq
-#### for
-#### while
+- Syntax: `seq number`
+- Description: Writes the sequence `1..number` to standard output (separated by newlines).
+- Example: `seq 3`
+#### for/while
+Let us explain the syntax of `for` and `while` loops with three examples:
+```
+#!/bin/bash
+for i in $( ls ); do
+  echo item: $i
+done
+```
+```
+#!/bin/bash
+for i in `seq 8`;
+do
+        echo $i
+done    
+```
+For the following example, note that `lt` in a test block (`[]`) evaluates to less than.
+```
+#!/bin/bash
+COUNTER=0
+while [  $COUNTER -lt 5 ]; do
+    echo The counter is $COUNTER
+    let COUNTER=COUNTER+1 
+done
+```
+
 #### mapfile
 
 
@@ -183,6 +239,8 @@ mention <, << etc also
 ### Exercises
 - Write a short script that, given two text files, concatenates them and writes the output to a file `merged.txt` in the working directory.
 - Given the files `lines.txt` in this directory, print out the 5th line using head and tail.
+- Using `xargs` with the option `n`, finish the command `echo a b c d e f |` so that the output is: ```a b c
+d e f ```
 
 ## Variables
 
