@@ -68,23 +68,65 @@ The following commands are used for examining files and are often used when pars
 
 
 ### Searching and Sorting
+In order to quickly find relevant content in messy log files, searching and sorting is absolute key. The commands below will get us started, though we will also have to dive deeper into additional options (such as `awk` and `sed` later on).
 #### grep
+- Syntax: `grep pattern [file]`
+- Description: Prints out every line in `file` that contains `pattern`. We will discuss how to define a pattern more under regular expressions.
+- Example 1: `grep '1' lines.txt` will print out the two lines that contain `1`.
+- Example 2: `grep '1' *` will print out the lines of any file in the current directory that contain `1`.
+- Example 3: `grep '.' lines.txt` will print out all lines in `lines.txt` as they all match the pattern `.`.
+- Notable Options:
+  - `c`: This prints only a count of the lines that match a pattern
+  - `i`: Ignores, case for matching
+  - `v`: This prints out all the lines that do not matches the pattern
+  - `f`: Takes patterns from file, one per line.
+  - `w` : Match whole word
+  - `o` : Print only the matched parts of a matching line,
 #### fgrep
+- Syntax: `grep string [file]`
+- Description: Prints out every line in `file` that contains `string`. The main difference to `grep` is that it searches for a string rather than a pattern.
+- Example 1: `fgrep '1' lines.txt` works just like the `grep` version.
+- Example 2: `fgrep '.' lines.txt` will print nothing, unlike the `grep` version.
 #### sort
+- Syntax: `sort file`
+- Description: Sorts the input file line by line and writes the result to standard output.
+- Example 1: `sort lines.txt`. Read the output carefully, you might be surprised!
+- Notable Options:
+  - `o`: allows you to specify an output file.
+  - `r`: sorts in reverse
+  - `n`: sort files numerically
 #### uniq
+- Syntax: `uniq file`
+- Description: Removes duplicate lines in text file.
+- Example: `uniq lines.txt`. Does not change a thing! How about if you repeat the line `3` twice and then run it?
 #### find
+- Syntax: `uniq file`
+- Description: Removes duplicate lines in text file.
+- Example: `uniq lines.txt`. Does not change a thing! How about if you repeat the line `3` twice and then run it?
 #### xargs
-#### locate
-#### which
-
+For the `xargs` command, we recommend first looking into the section about piping below, as it is hard to understand `xargs` without piping.
+- Syntax: `xargs [command]`
+- Description: xargs reads items from standard input as separated by blanks and executes a command once for each argument. The default command is to print it to standard output.
+- Example 1: `ls -1 . | xargs` This prints out the content of the current folder in one line!
+- Example 2: `echo 'one two three' | xargs mkdir` will create three folders in the current directory.
 
 
 ### Process Management
-#### ps/jobs
+These commands are the most basic to get you started understanding what is running on a system.
+#### ps
+- Syntax: `ps`
+- Description: Displays processes currently running (options allow you to toggle what kind of processes will be displayed.)
+- Example: `ps`
+- Notable Options:
+  - `A`: List all processes
+  - `au`: List all processes in BSD format
+  - `fp`: Display process by process id (PID)
 #### top
+- Syntax: `top`
+- Description: Live display or current processes with PID, %CPU and %Memory. You can quit the view  by typing `q`.
 #### kill
-#### &
-
+- Syntax: `kill PID`
+- Description: Kills the process with the given PID.
 
 ### Network
 #### ssh
