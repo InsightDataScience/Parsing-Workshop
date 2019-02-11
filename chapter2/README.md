@@ -86,7 +86,33 @@ However, the documentation of the `re` module is crucial to at least read once.
 
 
 ## Working with Files
+The functionality to work with files in Python is part of its `io` module that is always loaded and need not be imported.
+A simple way to open a file is via
+```Python
+try:
+    my_file_handle=open("example.txt")
+except IOError:
+    print("File not found or path is incorrect")
+finally:
+    print("exit")
+```
+(Note that it is better handle the error by printing a more concrete error message)
+Some methods to read a file:
+- `my_file_handle.read(n)`: Reads the first `n` bytes of  the file
+- `my_file_handle.read()`: Reads the entire file
+- `my_file_handle.readline()`: Reads one line of the file
+- `for line in my_file_handle:` loops through the file line by line
+- `my_file_handle.close()`: closes the file
 ## Argument Parsing
+When using command line arguments, it is important to parse them in a robust way. In Python, your module of choice is given by `argparse`. Using argparse you can define what arguments you require and what type they have.
+
+Make sure that you:
+- Have a self-contained function that takes in passed arguments and validates them before executing your code
+- Generate help and usage message for the user
+- Have meaningful error messages when the arguments given do not match the signature
+
+- [Action Item]: Read the excellent [documention of argparse](https://docs.python.org/3.7/howto/argparse.html) (contains lots of examples).
+
 ## Important Modules
 ## Additional Resources
 
