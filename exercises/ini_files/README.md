@@ -43,5 +43,7 @@ of the shape
 
 ## Exercises
 
+Before you get started, make sure you review [hashes in Bash](https://lzone.de/cheat-sheet/Bash%20Associative%20Array).
+
 1. Write a script implementing the function outline above and test it on example.ini!
 2. Why would such a script be useful?
