@@ -7,7 +7,7 @@ This introduction is by no means comprehensive - refer to our [additional resour
 ### Variables
 ### Comments
 ### Lists
-### Strings 
+### Strings
 ### Sets
 ### Dictionaries
 
@@ -17,3 +17,6 @@ This introduction is by no means comprehensive - refer to our [additional resour
 ## Argument Parsing
 ## Important modules
 ## Additional Resources
+
+## Next Chapter
+Let us move on to [chapter 3](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter3).
