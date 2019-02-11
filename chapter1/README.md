@@ -208,13 +208,17 @@ fi
 - Description: Writes the sequence `1..number` to standard output (separated by newlines).
 - Example: `seq 3`
 #### for/while
-Let us explain the syntax of `for` and `while` loops with three examples:
+Let us explain the syntax of `for` and `while` loops with three examples.
+
+The first loop bewlo loops through every element in the current working directory.
+
 ```
 #!/bin/bash
 for i in $( ls ); do
   echo item: $i
 done
 ```
+Recall that `seq 8` returns as list from 1 to 8. We can use this as a counter in a loop.
 ```
 #!/bin/bash
 for i in `seq 8`;
@@ -222,7 +226,7 @@ do
         echo $i
 done    
 ```
-For the following example, note that `lt` in a test block (`[]`) evaluates to less than.
+For the last example, note that `lt` in a test block (`[]`) evaluates to less than.
 ```
 #!/bin/bash
 COUNTER=0
