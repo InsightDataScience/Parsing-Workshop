@@ -1,0 +1,4 @@
+This file is helpful to play around with the Exercises
+Definitely loop through me and apply regular expressions.
+Let me also have some numbers: 1, 120
+78
