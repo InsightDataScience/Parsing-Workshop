@@ -365,7 +365,15 @@ The `>` and `>>` can be used to redirect the output stream into a file.
 d e f ```
 - Solve the following [10th Line](https://leetcode.com/problems/tenth-line/) exercise on Leetcode! Why does a simple solution based on `head` and `tail` not work?
   - Hint: One approach is to look at `mapfile` carefully.
+- What does the following code snippet do?
 
+```bash
+while read -r line || [[ -n "$line" ]]; do
+    echo $line
+done < "$1"
+```
+  - Take some time to dissect this code snippet, it can be quite useful when you want to work on a specific file on a line by line basis (by replacing the `echo $line` with something useful).
+  - Note that in chapter 3, you will learn `awk` and `sed` which are often the better choice over a custom loop.
 
 
 ## Additional Exercises
