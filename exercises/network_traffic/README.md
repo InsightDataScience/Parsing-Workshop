@@ -3,7 +3,10 @@
 In this exercise, we will play around with a packet capture (see `dns.cap` in this folder). The data and some of the exercises are taken from [AACC Cyber competition practice](https://cybercompaacc.com/challenges/network-traffic-analysis/traffic-analysis-1/).
 
 We highly recommend to work on this exercise after having completed chapter 4 of the workshop where you learn on how to work with capture packets and `.cap` files in both Python and Bash.
-It also gives an overview over DNS look ups and common DNS lookup types.
+
+## DNS Lookup types
+The data in this file capture contains DNS lookup types that categorize the kind of request that was made.
+For an overview over such types, [this site](https://support.opendns.com/hc/en-us/articles/227986607-Common-DNS-Request-Types) is a good resource.
 
 A typical record in `dns.cap` has the shape
 
