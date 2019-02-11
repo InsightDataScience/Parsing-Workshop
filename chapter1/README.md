@@ -287,7 +287,7 @@ You can access arguments in your functions by using the variable placeholders `$
 #!/bin/bash
 
 print_my_argument() {
-echo $1
+  echo $1
 }
 
 print_my_argument Hello
@@ -304,12 +304,53 @@ Bash does not allow functions to send a return value. While this seems extremely
 The return status can be accessed via `$` after the function was run.
 
 ```
+#!/bin/bash
 
+return_status () {
+  return 3
+}
+
+return_status
+echo The return value was $
 ```
-
+If we run this script, then the output will
+```
+3
+```
+as this was the return code set by the function.
 
 ## Piping
-mention <, << etc also
+One of the key concepts of Bash is piping, Bash's version of function composition. Piping is a very powerful concept to concatenate multiple commands.
+
+The syntax for piping is as follows:
+```
+command1 | command2 | command3 | ...
+```
+This means that first, `command1` will be executed and its output is then *piped* to `command2` whose output is then piped to `command3` etc.
+
+This is really best understood by looking at an example, let us run the following command:
+
+```
+ls -l | grep ".txt"
+```
+(Note that this is not the best way to do it, you should use `ls -l *.txt` instead).
+What happened here: `ls -l` lists all files in the current directory. Rather than sending this to standard output, we send it to `grep ".txt"` which filters out all lines that do not contain `.txt` in them. The output of this will be sent to standard output.
+
+It should be highlighted that commands in the pipeline (i.e. running between pipes) are being run in a subshell. This is important with regards to the scope of variables used within them.
+
+### Redirecting the Output Stream
+
+The `>` and `>>` can be used to redirect the output stream into a file.
+
+- Syntax `command > file`
+- Description: Redirects output of `command` to `file`. Overwrites content of `file` if it already exists
+- Example: `echo hello < test.txt`
+
+- Syntax `command >> file`
+- Description: Redirects output of `command` to `file`. Appends content of `file` if it already exists.
+- Example: `echo hello < test.txt`
+
+
 
 ### Exercises
 - Write a short script that, given two text files, concatenates them and writes the output to a file `merged.txt` in the working directory.
