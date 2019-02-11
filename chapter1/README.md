@@ -226,11 +226,86 @@ For the following example, note that `lt` in a test block (`[]`) evaluates to le
 COUNTER=0
 while [  $COUNTER -lt 5 ]; do
     echo The counter is $COUNTER
-    let COUNTER=COUNTER+1 
+    let COUNTER=COUNTER+1
 done
 ```
-
 #### mapfile
+- Syntax: `mapfile array`
+- Description: Reads from standard input and outputs it into `array` as an array, where each row of standard input is its own element in the array.
+- Notable Options:
+  - `n`: set maximum number of lines to read
+  - `s number`: Discard the first number of entries
+
+## Variable Assignment
+Variable assignment is simple and straightforward and no declaration is required before assignment:
+```
+STR="Hello World!"
+```
+is all it needs!
+- [Action Item]: Learn more about [Variable Naming Conventions](https://bash.cyberciti.biz/guide/Rules_for_Naming_variable_name).
+
+### Arrays
+We have already used arrays in this workshop implicitly and their usage is pretty intuitive.
+However, if you feel a little rusty, we recommend reading
+[The Ultimate Bash Array Tutorial](https://www.thegeekstuff.com/2010/06/bash-array-tutorial).
+
+## Functions
+There are two ways to define a Functions
+```
+function foo {
+  echo "Hello World"
+}
+```
+or
+```
+foo (){
+  echo "Hello World"
+}
+```
+Both versions are functionally equivalent. Note that the `()` is just do tell Bash that we are defining a funcion - you never actually write anything between the brackets (We will see below how to pass arguments to functions).
+
+Go ahead and create file `first_function.sh` in this folder containing:
+```
+#!/bin/bash
+# My First Function!
+my_function () {
+  echo "My first function!"
+}
+
+my_function
+```
+Let us now execute the script via
+```
+./first_function.sh
+```
+You should now see `My first function!` printed to the output.
+
+### Passing Arguments
+
+You can access arguments in your functions by using the variable placeholders `$1, $2, etc`. To try this out, write a script `passing_arguments.sh`
+```
+#!/bin/bash
+
+print_my_argument() {
+echo $1
+}
+
+print_my_argument Hello
+print_my_argument "Hello World"
+print_my_argument Hello World
+```
+#### Exercise
+- What happens when you run `print_my_argument` without any parameter?
+
+
+### Return Values (or lack thereof)
+
+Bash does not allow functions to send a return value. While this seems extremely limiting, you will notice that for most Bash's purposes, this is not a big issue. Bash does allow us to set a return status at the end.
+The return status can be accessed via `$` after the function was run.
+
+```
+
+```
 
 
 ## Piping
@@ -241,19 +316,21 @@ mention <, << etc also
 - Given the files `lines.txt` in this directory, print out the 5th line using head and tail.
 - Using `xargs` with the option `n`, finish the command `echo a b c d e f |` so that the output is: ```a b c
 d e f ```
+- Solve the following [10th Line](https://leetcode.com/problems/tenth-line/) exercise on Leetcode! Why does a simple solution based on `head` and `tail` not work?
+  - Hint: One approach is to look at `mapfile` carefully.
 
-## Variables
 
-## Quoting
 
-## Functions
+## Additional Exercises
+- Solve the [Word Frequency](https://leetcode.com/problems/word-frequency/) exercise on Leetcode.
+- Solve the [Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/) exercise on Leetcode
+- Solve the [Transpose File](https://leetcode.com/problems/transpose-file/) on Leetcode.
 
-## Additional exercises
-
-## Additional resources
+## Additional Resources
 
 - [Bash workshop](http://workshop-bash.com/)
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
+- [Bash Scripting Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/)
 
 ## Next Chapter
 
