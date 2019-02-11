@@ -2,7 +2,7 @@
 
 In this chapter, we will discuss how to analyze capture files with Bash and Python. Capture files contain packets collected by a packet sniffing program and are also often called trace files or bone files.
 
-We added  sample capture file `http.cap` which is original from [here](https://wiki.wireshark.org/SampleCaptures#TCP).
+We added  sample capture file `http.cap` which is originally from [here](https://wiki.wireshark.org/SampleCaptures#TCP).
 
 ## Bash
 
@@ -21,9 +21,13 @@ You should now see all packet contained in the file.
 
 ## Python
 
-In Python, a popular package for working capture files is `pyshark`. Make sure you install `wireshark` first (on Mac OS X via `brew install wireshark`, on Ubuntu via `apt-get install wireshark`).
+In Python, a popular package for working capture files is `pyshark`, which is based on `wireshark`.
 
-You can then install pyshark via `pip install pyshark`
+### Installation
+ - Make sure you install `wireshark` first
+   - Mac OS X: `brew install wireshark`
+   - Ubuntu:  `apt-get install wireshark`
+ - You can then install pyshark via `pip install pyshark`
 
 Here is a code snippet that reads the file and then walks through every packet to print out the timestamp:
 
@@ -36,6 +40,8 @@ print(dir(cap)) # Prints all the fields that can be accessed
 for packet in cap:          # Loops through every packet captured
   print(packet.sniff_time)  # Prints out the timestamp of the packet
 ```
+
+To learn more about pyshark, read [here](https://kiminewt.github.io/pyshark/) for more details.
 
 ### Exercises
 
