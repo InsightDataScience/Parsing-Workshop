@@ -21,7 +21,29 @@ You should now see all packet contained in the file.
 
 ## Python
 
-## DNS Lookup Types
+In Python, a popular package for working capture files is `pyshark`. Make sure you install `wireshark` first (on Mac OS X via `brew install wireshark`, on Ubuntu via `apt-get install wireshark`).
+
+You can then install pyshark via `pip install pyshark`
+
+Here is a code snippet that reads the file and then walks through every packet to print out the timestamp:
+
+```python
+import pyshark
+cap = pyshark.FileCapture('http.cap')
+
+print(dir(cap)) # Prints all the fields that can be accessed
+
+for packet in cap:          # Loops through every packet captured
+  print(packet.sniff_time)  # Prints out the timestamp of the packet
+```
+
+### Exercises
+
+Please complete the same exercises in Python.
+
+- Print all lines containing the IP address `65.208.228.223`.
+- Compute the average time (in ms) between two packets in the file.
+
 
 ## Additional Exercises
 
