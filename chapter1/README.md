@@ -389,4 +389,4 @@ done < "$1"
 
 ## Next Chapter
 
-Let us move on to [chapter 2](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter1).
+Let us move on to [chapter 2](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter2).
