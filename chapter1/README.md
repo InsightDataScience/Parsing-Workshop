@@ -181,7 +181,9 @@ Example:
 #### read
 - Syntax: `read variable_name(s)`
 - Description: Assignes standard input to variable names.
-- Example: ``` read var_name
+- Example:
+```
+read var_name
 echo "Your name is: $var_name"
 ```
 #### let and (())
