@@ -50,11 +50,11 @@ Remember to work on solutions for Python and Bash. It is also worth thinking abo
 Note that this is a long list of exercises and many of them are signifcantly more involved than what we discussed so far. We recommend working on one exercise per day in the order listed here.
 
 - [Regular Expressions](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reg_ex)
-- [Analyzing Apache Logs](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/analyzing_apache_logs).
+- [Analyzing Apache Logs](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/analyzing_apache-logs).
 - [Ini Files](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/ini_files).
 - [Reports](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reports)
 - [Traceroutes](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/traceroutes)
-- [video_log_files](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
+- [Analyzing video log files](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
 
 ## Next Chapter
 
