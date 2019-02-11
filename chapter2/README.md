@@ -113,9 +113,13 @@ Make sure that you:
 
 - [Action Item]: Read the excellent [documention of argparse](https://docs.python.org/3.7/howto/argparse.html) (contains lots of examples).
 
-## Important Modules
+## Other Important Modules
+Here is a short list of additional modules that are useful for parsing and working with logs. We will revisit some of them in later chapters.
+- [Beautiful Soup for HTML parsing](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- You can also generate your own parsers! We might add more material on this in subsequent chapters, but the curious can learn more [here](https://tomassetti.me/parsing-in-python/#parserGenerators)
 ## Additional Resources
-
+- [Introduction to Python](https://www.geeksforgeeks.org/python-language-introduction/)
+- [Log File Parsing in Python](https://pythonicways.wordpress.com/2016/12/20/log-file-parsing-in-python/)
 ## Exercises
 ## Next Chapter
 Let us move on to [chapter 3](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter3).
