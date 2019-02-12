@@ -100,9 +100,11 @@ In order to quickly find relevant content in messy log files, searching and sort
 - Description: Removes duplicate lines in text file.
 - Example: `uniq lines.txt`. Does not change a thing! How about if you repeat the line `3` twice and then run it?
 #### find
-- Syntax: `uniq file`
-- Description: Removes duplicate lines in text file.
-- Example: `uniq lines.txt`. Does not change a thing! How about if you repeat the line `3` twice and then run it?
+- Syntax: `find folder [options]`
+- Description: Finds files in folder.
+- Example 1: `find .`. 
+- Example 2: `find . -name "example*"` Finds all files of the shape `example*`
+- Example 3: `find . -size +1G` Finds all files over `1G` in size.
 #### xargs
 For the `xargs` command, we recommend first looking into the section about piping below, as it is hard to understand `xargs` without piping.
 - Syntax: `xargs [command]`
