@@ -13,9 +13,9 @@ Note that you can execute all examples given in this subsection to try them out.
 Let us get started with a bunch commands that allow you to work with files.
 There is not too much to say about them, so we will keep descriptions short.
 #### cp
-- Syntax: `copy source destination`
+- Syntax: `cp source destination`
 - Description: Allows you to copy a file.
-- Example: `copy example.txt other.txt` will create a copy of example.txt named other.txt in this folder.
+- Example: `cp example.txt other.txt` will create a copy of example.txt named other.txt in this folder.
 - Notable Options:
   - `l`: links files instead of copies them
   - `n`: no file overwrites
