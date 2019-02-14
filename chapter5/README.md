@@ -17,7 +17,15 @@ Let us jump right into looking into a basic example
 </html>
 ```
 
-You can find this file in `hello.html`.
+HTML code consists of nested tags of form `<tag> content </tag>` (There are special tags that need not be closed). For example, the `<h1>` tag indicates that the content within is a header, whereas the `<p>` tag encloses a paragraph.
+
+You can find this file in `hello.html`, open it with your browser to see the following output.
+
+![hello.html](hello_screen.png)
+
+The goal of HTML parsing is to extract content from these files. For instance, we could ask to extract all texts
+
+
 
 ## Bash
 
