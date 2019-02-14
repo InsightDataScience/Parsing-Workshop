@@ -6,13 +6,29 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 
 ## awk
 
-- Syntax: `awk [options] 'program text' file`
-- Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way. See the example for illustration.
-- Example: `ls -l | awk ‘{print $1}’`. This will print the first column of `ls -l`. With respect to our syntax, `file` is `ls -l`. Our program text can access the columns of each line via `$1, $2, etc`. The variable `$0` contains the whole file.
-- Notable Options:
-  - `F`: Specify delimiter, whitespace is default.
+- Syntax: `awk [options] 'BEGIN{}; {}; END{}' file`
+-- The BEGIN block is executed before processing the first line.
+-- The MIDDLE block is executed on every line.
+-- The END block is executed after the EOF signal.
+- Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way.  This is very similar to the Split() function, found in many languagues, being run on each line of a file.
 
 ### Exercises
+Our First Awk
+consider the file:
+1 2 3
+4 5 6
+7 8 9
+
+if we use awk on this text document we can
+```
+awk '{print $0}' FILE // Print each line
+```
+1 2 3
+4 5 6
+7 8 9
+
+
+
 
 - Before you run it, what does
 ```
