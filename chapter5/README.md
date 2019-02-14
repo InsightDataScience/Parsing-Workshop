@@ -23,8 +23,25 @@ You can find this file in `hello.html`, open it with your browser to see the fol
 
 ![hello.html](hello_screen.png)
 
-The goal of HTML parsing is to extract content from these files. For instance, we could ask to extract all texts
+The goal of HTML parsing is to extract content from these files. For instance, we could extract all texts within the `<h1>` tags to generate a rudimentary table of content.
 
+Before we jump into actually parsing, we need to worry about understanding more complex html files. As an example, go to [weather.com](https://weather.com/), a website that does not look too complex at first glance.
+Using your favorite web browser, view the sites source (in Chrome: right click and `View page source`).
+You will see a huge mess of html code that is difficult to understand.
+This where most modern browser's come in. On Google Chrome for instance, you can right click a particular object and click on `Inspect`.
+If you do this for the `Today` button on the top of the page, you can see the corresponding HTML code containing the the text and the link of the button:
+
+![Today](inspect.png)
+
+
+### Exercise
+- What is the `classname` of the `div` tag that contains the box entitled *Our Photo Gallery Picks*?
+
+<details><summary>Show Solution</summary>
+<p>
+cm-small-content wx-media-group
+</p>
+</details>
 
 
 ## Bash
