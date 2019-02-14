@@ -15,17 +15,17 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 ### Exercises
 Our First Awk
 consider the file:
-1 2 3
-4 5 6
-7 8 9
+1 2 3  
+4 5 6  
+7 8 9  
 
 if we use awk on this text document we can
 ```
 awk '{print $0}' FILE // Print each line
 ```
-1 2 3
-4 5 6
-7 8 9
+1 2 3  
+4 5 6  
+7 8 9  
 
 
 
