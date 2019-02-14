@@ -51,11 +51,11 @@ awkWard
 easy huh?  
 
 ```
-awk '{x+=$2; print $3, " + "};END{print "="; print x}' FILE //simple addition 1-liner
+awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition 1-liner
 ```
-3 +   
-6 +   
-9 +   
+3 plus   
+6 plus   
+9 plus   
 = 
 18  
 
