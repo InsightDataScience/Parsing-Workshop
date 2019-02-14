@@ -1,0 +1,38 @@
+1) Get your mac address, print it by itself on a line.
+  i.e. ifconfig | awk '{}'
+
+2) Put your mac address in a variable named MACADDY
+  hint, use tick marks '`' which is left of your 1 key on a mac.
+
+3) Print the base 10 translation of MACADDY
+  i.e. echo $MACADDY | awk '{}'
+
+4) Get your most used commands.
+  i.e. history | awk '{}' | sort -rn | head
+
+5)Use awk to grep a file. Find the quote that starts /So please,/ and ends /lots of books/ in DahlWeb.txt -- Author https://www.hypable.com/best-roald-dahl-quotes/
+  i.e. curl WEBSITE | awk '{/FIRST/,/LAST/}'
+
+6) check for unread mail in your gmail inbox.  (google tends to block these commands, so do not worry if you need to skip this one)
+  i.e. curl -u USERNAME --silent "https://mail.google.com/mail/feed/atom" | awk '{}'   #Note, dont put username:password, thats BAD, it will prompt you.
+
+7) combine awk with last and uniq to get a list of persons who have used your computer, can you sort it based upon number of uses? what about print number of times used as well?
+
+8) use awk to add 5 + 5 with the command echo "5+5" | awk '{}'
+  Dont cheat and add spaces to your echo command, use the explicit command.
+
+9) define two environment variables: HELLO="Hello" and WORLD="World", use them to print Hello, World! from awk WITHOUT using a pipe. 
+
+10) Print all users in the /etc/passwd file
+
+11) Perform any of the above commands using the -f flag for awk
+
+12) Use awk to make a random number.
+  hint: rand()
+
+13) Use awk to define a hello world function, then print hello world with said function.
+  This is probably best done in a .sh file as opposed to on the CmdLine
+
+14) Read an article on X number of ways to use awk, try out some of the commands.  I suggest looking up one that affects your field, like 25 server administrator commands for awk or Awk for data scientists, or some other google search.
+
+15) Look up RS, FS, OFS, ORS, NF, NR, FNR and FIELDWIDTHS in the manual.
