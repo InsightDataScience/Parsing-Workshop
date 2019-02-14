@@ -41,7 +41,9 @@ awk '{print $4}' FILE // no output
 ```
 
 In the following example, notice how the BEGIN and END blocks are executed once, while the middle block is executed once per line of FILE:  
-awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings
+```
+awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings  
+```
 Hello World  
 awkWard  
 awkWard  
@@ -56,6 +58,59 @@ awk '{x+=$2; print $3, " + "};END{print "-----"; print x}' FILE //simple additio
 9 +   
 -----  
 18  
+
+A Huge reason why awk is very useful is because of what you saw in the previous examples.  90% of use cases are taking one linux command and piping it to awk.  This in turn allows you to select a specific value and print it to your screen.  
+With that said, awk can be not only useful, but incredibly powerful.  I used to work in a lab where one of the post-docs used awk instead of python or perl for ALL of his scripting.  
+First of all, awk can do c-style for loops:  
+```
+awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{print "-----"; for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.
+```
+-----   
+12  
+15  
+18  
+  
+In addition, awk can do key value loops as well:
+````
+awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{print "-----"; for (i in x){print x[i]}}' FILE //Notice how the order changed!
+```
+-----  
+15  
+18  
+12  
+
+
+Alright, so we can do some basic math and such with awk.  How about parsing log files?  
+As tasks get more complex, awk actually begins to shine.  Consider a regularly recurring task which prints the time of a ping and response from various servers on your network.  
+Us-North: 35   
+Us-East: 32  
+Us-South: 112  
+Us-West: 128  
+Us-North: 34   
+Us-East: 31  
+Us-South: 111  
+Us-West: 127  
+Us-North: 36  
+Us-East: 33  
+Us-South: 113  
+Us-West: 129  
+
+How can we use this log file to get each average latency (or other value) for each server? etc? (Notice the FS, this is the Field separator which defaults to " ")
+```
+awk 'BEGIN{FS=": "};{x[$1]+=$2}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/3.0}}' FILE2
+```
+Average Latencies:  
+------  
+Us-North  :  35  
+Us-West  :  128  
+Us-East  :  32  
+Us-South  :  112  
+
+
+
+
+
+
 
 
 - Before you run it, what does
