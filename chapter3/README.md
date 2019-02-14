@@ -51,21 +51,20 @@ awkWard
 easy huh?  
 
 ```
-awk '{x+=$2; print $3, " + "};END{print "-----"; print x}' FILE //simple addition 1-liner
+awk '{x+=$2; print $3, " + "};END{print "="; print x}' FILE //simple addition 1-liner
 ```
 3 +   
 6 +   
 9 +   
------  
+= 
 18  
 
 A Huge reason why awk is very useful is because of what you saw in the previous examples.  90% of use cases are taking one linux command and piping it to awk.  This in turn allows you to select a specific value and print it to your screen.  
 With that said, awk can be not only useful, but incredibly powerful.  I used to work in a lab where one of the post-docs used awk instead of python or perl for ALL of his scripting.  
 First of all, awk can do c-style for loops:  
 ```
-awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{print "-----"; for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.
+awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.
 ```
------   
 12  
 15  
 18  
