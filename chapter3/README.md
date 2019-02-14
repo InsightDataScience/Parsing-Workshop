@@ -14,12 +14,12 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 
 ### Exercises
 Our First Awk
-consider the file:
+consider the file:  
 1 2 3  
 4 5 6  
 7 8 9  
 
-if we use awk on this text document we can
+if we use awk on this text document we can mimic the linux command 'cat'
 ```
 awk '{print $0}' FILE // Print each line
 ```
@@ -27,7 +27,35 @@ awk '{print $0}' FILE // Print each line
 4 5 6  
 7 8 9  
 
+```
+awk '{print $1}' FILE // print the first number of each line
+```
+1  
+4  
+7  
+The previous examples demonstrate how awk is NOT 0-indexed.  The zero is reserved for the whole line.  Instead indexing starts at 1.  
 
+what about?  
+```
+awk '{print $4}' FILE // no output
+```
+
+In the following example, notice how the BEGIN and END blocks are executed once, while the middle block is executed once per line of FILE:  
+awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings
+Hello World  
+awkWard  
+awkWard  
+awkWard  
+easy huh?  
+
+```
+awk '{x+=$2; print $3, " + "};END{print "-----"; print x}' FILE //simple addition 1-liner
+```
+3 +   
+6 +   
+9 +   
+-----  
+18  
 
 
 - Before you run it, what does
