@@ -45,10 +45,10 @@ cm-small-content wx-media-group
 
 
 ## Bash
-
+tbd
 ## Python
 
-BeautifulSoup
+tbd
 
 ## Exercises
 
