@@ -13,7 +13,7 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 - Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way.  This is very similar to the Split() function, found in many languagues, being run on each line of a file.
 
 ### Exercises
-Our First Awk
+Our First Awk  
 consider the file:  
 1 2 3  
 4 5 6  
