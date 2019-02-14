@@ -54,7 +54,7 @@ easy huh?
 awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition 1-liner
 ```
 3 plus   
-6 plus   
+6 plus  I Honestly dont know why it is bolded   
 9 plus   
 = 
 18  
@@ -70,7 +70,7 @@ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' F
 18  
   
 In addition, awk can do key value loops as well:
-````
+```
 awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{print "-----"; for (i in x){print x[i]}}' FILE //Notice how the order changed!
 ```
 -----  
