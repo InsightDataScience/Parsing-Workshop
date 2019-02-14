@@ -6,10 +6,10 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 
 ## awk
 
-- Syntax: `awk [options] 'BEGIN{}; {}; END{}' file`
--- The BEGIN block is executed before processing the first line.
--- The MIDDLE block is executed on every line.
--- The END block is executed after the EOF signal.
+- Syntax: `awk [options] 'BEGIN{}; {}; END{}' file`  
+-- The BEGIN block is executed before processing the first line.  
+-- The MIDDLE block is executed on every line.  
+-- The END block is executed after the EOF signal.  
 - Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way.  This is very similar to the Split() function, found in many languagues, being run on each line of a file.
 
 ### Exercises
@@ -125,10 +125,6 @@ a b c
 awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3 // the regex causes you to not try to add 'b' to your value of 7
 ```
 5
-
-
-
-
 
 - Before you run it, what does
 ```
