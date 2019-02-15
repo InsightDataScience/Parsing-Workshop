@@ -117,7 +117,7 @@ Us-East:  :  32
 Us-South:  :  112  
 Us-North:  :  35  
 
-- A regex example, just so you have some experience with it.  WAIT, Regex too?!  That means you can search for lines that begin with a specific word or pattern, and then print their pattern?  Yes, exactly. 
+- A regex example, just so you have some experience with it.  WAIT, Regex too?!  That means you can search for lines that begin with a specific word or pattern, and then print their pattern?  Yes, exactly.   
 Consider:  
 1 2 3  
 4 5 6  
@@ -146,7 +146,17 @@ Sed is a powerful stream editor with a plethora of options. For this workshop, w
 - Description: Reads through the file one line at a time and performs processing on it based on options.
 - Example: `sed ‘s/old/NEW/’ file` This command will substitute `old` with `NEW` everywhere in the file.
 
-In general, options given to `sed` starting with `s/` will form some sort of substitution on the file.
+Utilizing sed requires an understanding of RegEx.  REGular EXpressions are a form of text matching which is used in many modern scripting languages.  Sed works in much the same way that awk does, in that it works on each individual line and performs operations.  
+While my individual knowledge of sed is shallow compared to my awk, in general I find that 95% of my use cases with sed involve only a few parameters.
+
+- First, the -i flag to sed allows you to edit the file in place, as opposed to writing to standard out.  If given a character(s) after the -i a BACKUP of the original file will be written with the extension .character(s)
+```
+sed -i bak 's/old/NEW/g' file
+```
+The 's' stipulates substitution, and the 'g' stipulates that sed will not go to the next line after performing one substitution, i.e. global.
+
+
+Finally, sed does not require that your regexp be wrapped in /old/new/.  Instead you can use something like ~old~new~.  This is a really useful case when editing filestructures or websites.
 
 ### Exercises
 - What does `sed -n "/test/p" example.txt` do?
