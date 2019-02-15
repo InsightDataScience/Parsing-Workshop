@@ -363,12 +363,15 @@ The `>` and `>>` can be used to redirect the output stream into a file.
 ### Exercises
 - Write a short script that, given two text files, concatenates them and writes the output to a file `merged.txt` in the working directory.
 - Given the files `lines.txt` in this directory, print out the 5th line using head and tail.
-- Using `xargs` with the option `n`, finish the command `echo a b c d e f |` so that the output is: ```a 
-b
-c
-d
-e
-f ```
+- Using `xargs` with the option `n`, finish the command `echo a b c d e f |` so that the output is: 
+```
+    a
+    b
+    c
+    d
+    e
+    f
+ ```
 - Solve the following [10th Line](https://leetcode.com/problems/tenth-line/) exercise on Leetcode! Why does a simple solution based on `head` and `tail` not work?
   - Hint: One approach is to look at `mapfile` carefully.
 - What does the following code snippet do?
