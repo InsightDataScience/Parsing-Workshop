@@ -323,7 +323,7 @@ echo The return value was $
 ```
 If we run this script, then the output will
 ```
-3
+The return value was 3
 ```
 as this was the return code set by the function.
 
