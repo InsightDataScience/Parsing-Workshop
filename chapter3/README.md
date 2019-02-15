@@ -156,7 +156,11 @@ sed -i bak 's/old/NEW/g' file
 The 's' stipulates substitution, and the 'g' stipulates that sed will not go to the next line after performing one substitution, i.e. global.
 
 
-Finally, sed does not require that your regexp be wrapped in /old/new/.  Instead you can use something like ~old~new~.  This is a really useful case when editing filestructures or websites.
+Finally, sed substitutions do not require that your regexp be wrapped in forward slashes as in : s/old/new/.  Instead you can use something like
+```
+sed  's@old@NEW@g' FILE
+```
+  This is a really useful case when editing filestructures or websites.
 
 ### Exercises
 - What does `sed -n "/test/p" example.txt` do?
