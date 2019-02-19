@@ -53,12 +53,13 @@ easy huh?
 ```
 awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition 1-liner
 ```
-3 plus   
-6 plus  I Honestly dont know why it is bolded   
-9 plus   
+```
+3    
+6   I Honestly dont know why it is bolded   
+9    
 = 
 18  
-
+```
 - A Huge reason why awk is very useful is because of what you saw in the previous examples.  90% of use cases are taking one linux command and piping it to awk.  This in turn allows you to select a specific value and print it to your screen.  
 
 - With that said, awk can be not only useful, but incredibly powerful.  I used to work in a lab where one of the post-docs used awk instead of python or perl for ALL of his scripting.  
