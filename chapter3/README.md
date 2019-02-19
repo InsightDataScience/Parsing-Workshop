@@ -64,7 +64,8 @@ $ awk '{x+=$2; print $3};END{print "="; print x}' FILE //simple addition 1-liner
 
 - First of all, awk can do c-style for loops: Notice the NF variable, this is Number of Fields, i.e. the length of the array after the split is performed.  
 ```
-$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.  
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE 
+# notice how for loops have () around conditions, and {} around the actual contents.  
 12  
 15  
 18  
