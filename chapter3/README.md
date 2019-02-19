@@ -15,24 +15,29 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 ### Exercises
 Our First Awk  
 consider the file:  
+```
+$cat FILE
 1 2 3  
 4 5 6  
 7 8 9  
-
+```
 - if we use awk on this text document we can mimic the linux command 'cat'
 ```
 awk '{print $0}' FILE // Print each line
 ```
+```
 1 2 3  
 4 5 6  
 7 8 9  
-
+```
 ```
 awk '{print $1}' FILE // print the first number of each line
+```
 ```
 1  
 4  
 7  
+```
 The previous examples demonstrate how awk is NOT 0-indexed.  The zero is reserved for the whole line.  Instead indexing starts at 1.  
 
 - what about?  
@@ -44,18 +49,19 @@ awk '{print $4}' FILE // no output
 ```
 awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings  
 ```
+```
 Hello World  
 awkWard  
 awkWard  
 awkWard  
 easy huh?  
-
+```
 ```
 awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition 1-liner
 ```
 ```
 3    
-6   I Honestly dont know why it is bolded   
+6      
 9    
 = 
 18  
