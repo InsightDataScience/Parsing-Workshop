@@ -16,24 +16,20 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 Our First Awk  
 consider the file:  
 ```
-$cat FILE
+$ cat FILE  
 1 2 3  
 4 5 6  
 7 8 9  
 ```
 - if we use awk on this text document we can mimic the linux command 'cat'
 ```
-awk '{print $0}' FILE // Print each line
-```
-```
+$ awk '{print $0}' FILE // Print each line  
 1 2 3  
 4 5 6  
 7 8 9  
 ```
 ```
-awk '{print $1}' FILE // print the first number of each line
-```
-```
+$ awk '{print $1}' FILE // print the first number of each line  
 1  
 4  
 7  
@@ -42,14 +38,12 @@ The previous examples demonstrate how awk is NOT 0-indexed.  The zero is reserve
 
 - what about?  
 ```
-awk '{print $4}' FILE // no output
+$ awk '{print $4}' FILE // no output  
 ```
 
 - In the following example, notice how the BEGIN and END blocks are executed once, while the middle block is executed once per line of FILE:  
 ```
-awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings  
-```
-```
+$ awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE //Print some strings    
 Hello World  
 awkWard  
 awkWard  
@@ -57,9 +51,7 @@ awkWard
 easy huh?  
 ```
 ```
-awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition 1-liner
-```
-```
+$ awk '{x+=$2; print $3};END{print "="; print x}' FILE //simple addition 1-liner  
 3    
 6      
 9    
@@ -72,23 +64,23 @@ awk '{x+=$2; print $3, " plus "};END{print "="; print x}' FILE //simple addition
 
 - First of all, awk can do c-style for loops: Notice the NF variable, this is Number of Fields, i.e. the length of the array after the split is performed.  
 ```
-awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.
-```
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE // notice how for loops have () around conditions, and {} around the actual contents.  
 12  
 15  
 18  
-  
+```
 - In addition, awk can do key value loops as well:
 ```
-awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{for (i in x){print x[i]}}' FILE //Notice how the order changed!
-```
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{for (i in x){print x[i]}}' FILE //Notice how the order changed!  
 15  
 18  
 12  
-
+```
 
 - Alright, so we can do some basic math and such with awk.  How about parsing log files?  
 - As tasks get more complex, awk actually begins to shine.  Consider a regularly recurring task which prints the time of a ping and response from various servers on your network.  
+```
+$ cat FILE2
 Us-North: 35   
 Us-East: 32  
 Us-South: 112  
@@ -101,40 +93,41 @@ Us-North: 36
 Us-East: 33  
 Us-South: 113  
 Us-West: 129  
-
+```
 - How can we use this log file to get each average latency (or other value) for each server? etc? (Notice the FS, this is the Field separator which defaults to " ")
 ```
-awk 'BEGIN{FS=": "};{x[$1]+=$2}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/3.0}}' FILE2
-```
+$ awk 'BEGIN{FS=": "};{x[$1]+=$2}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/3.0}}' FILE2
 Average Latencies:  
 ------  
 Us-North  :  35  
 Us-West  :  128  
 Us-East  :  32  
 Us-South  :  112  
-
+```
 - Well, that is nice and good, but what if we dont know how many of each ping/response there is? what if they're not in order? etc??  Easy, just add a counter.
 ```
-awk 'BEGIN{FS": "};{x[$1]+=$2; y[$1]++}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/y[i]}}' FILE2 // notice different order! (Also note, this is not covering floating point div, just google it)
-```
+$ awk 'BEGIN{FS": "};{x[$1]+=$2; y[$1]++}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/y[i]}}' FILE2 // notice different order! (Also note, this is not covering floating point div, just google it)
 Average Latencies:  
 ------  
 Us-West:  :  128  
 Us-East:  :  32  
 Us-South:  :  112  
 Us-North:  :  35  
-
+```
 - A regex example, just so you have some experience with it.  WAIT, Regex too?!  That means you can search for lines that begin with a specific word or pattern, and then print their pattern?  Yes, exactly.   
-Consider:  
+- Regex follows the syntax : String~/substring/ (see the example below, but basically a ~/ / allows regex in awk)
+Consider: 
+```
+$ cat FILE3 
 1 2 3  
 4 5 6  
 a b c  
 7 8 9  
 ```
-awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3 // the regex causes you to not try to add 'b' to your value of 7
 ```
+$ awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3 // the regex causes you to not try to add 'b' to your value of 7
 5  
-
+```
 - Try to write the command to only get Us-West latencies from FILE2.
 
 - Before you run it, what does
@@ -163,11 +156,17 @@ sed -i bak 's/old/NEW/g' file
 The 's' stipulates substitution, and the 'g' stipulates that sed will not go to the next line after performing one substitution, i.e. global.
 
 
-Finally, sed substitutions do not require that your regexp be wrapped in forward slashes as in : s/old/new/.  Instead you can use something like
+You should know : sed substitutions do not require that your regexp be wrapped in forward slashes as in : s/old/new/.  Instead you can use something like
 ```
 sed  's@old@NEW@g' FILE
 ```
   This is a really useful case when editing filestructures or websites.
+
+Finally, instead of combining head and tail to print a specific line of a file.  We can use the following syntax for a more computationally efficient solution.
+```
+sed -n 25p FILE // print the 25th line
+sed -n 25d FILE // delete the 25th line
+```
 
 ### Exercises
 - What does `sed -n "/test/p" example.txt` do?
