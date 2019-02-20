@@ -23,13 +23,13 @@ $ cat FILE
 ```
 - if we use awk on this text document we can mimic the linux command 'cat'
 ```
-$ awk '{print $0}' FILE <br># Print each line  
+$ awk '{print $0}' FILE \n# Print each line  
 1 2 3  
 4 5 6  
 7 8 9  
 ```
 ```
-$ awk '{print $1}' FILE <br># print the first number of each line  
+$ awk '{print $1}' FILE \n# print the first number of each line  
 1  
 4  
 7  
@@ -38,12 +38,12 @@ The previous examples demonstrate how awk is NOT 0-indexed.  The zero is reserve
 
 - what about?  
 ```
-$ awk '{print $4}' FILE <br># no output  
+$ awk '{print $4}' FILE \n# no output  
 ```
 
 - In the following example, notice how the BEGIN and END blocks are executed once, while the middle block is executed once per line of FILE:  
 ```
-$ awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE <br>#Print some strings    
+$ awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE \n#Print some strings    
 Hello World  
 awkWard  
 awkWard  
@@ -51,7 +51,7 @@ awkWard
 easy huh?  
 ```
 ```
-$ awk '{x+=$2; print $3};END{print "="; print x}' FILE <br>#simple addition 1-liner  
+$ awk '{x+=$2; print $3};END{print "="; print x}' FILE \n#simple addition 1-liner  
 3    
 6      
 9    
@@ -72,7 +72,7 @@ $ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}'
 ```
 - In addition, awk can do key value loops as well:
 ```
-$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{for (i in x){print x[i]}}' FILE <br>#Notice how the order changed!  
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{for (i in x){print x[i]}}' FILE \n#Notice how the order changed!  
 15  
 18  
 12  
@@ -107,7 +107,7 @@ Us-South  :  112
 ```
 - Well, that is nice and good, but what if we dont know how many of each ping/response there is? what if they're not in order? etc??  Easy, just add a counter.
 ```
-$ awk 'BEGIN{FS": "};{x[$1]+=$2; y[$1]++}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/y[i]}}' FILE2 <br># notice different order! (Also note, this is not covering floating point div, just google it)
+$ awk 'BEGIN{FS": "};{x[$1]+=$2; y[$1]++}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/y[i]}}' FILE2 \n# notice different order! (Also note, this is not covering floating point div, just google it)
 Average Latencies:  
 ------  
 Us-West:  :  128  
@@ -126,7 +126,7 @@ a b c
 7 8 9  
 ```
 ```
-$ awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3 <br># the regex causes you to not try to add 'b' to your value of 7
+$ awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3 \n# the regex causes you to not try to add 'b' to your value of 7
 5  
 ```
 - Try to write the command to only get Us-West latencies from FILE2.
@@ -165,8 +165,8 @@ sed  's@old@NEW@g' FILE
 
 Finally, instead of combining head and tail to print a specific line of a file.  We can use the following syntax for a more computationally efficient solution.
 ```
-sed -n 25p FILE <br># print the 25th line
-sed -n 25d FILE <br># delete the 25th line
+sed -n 25p FILE \n# print the 25th line
+sed -n 25d FILE \n# delete the 25th line
 ```
 
 ### Exercises
@@ -176,8 +176,8 @@ sed -n 25d FILE <br># delete the 25th line
 
 As mentioned above, we highly recommend working through those tutorials carefully before proceeding.
 
-- For `sed`: [Sed - An Introduction and Tutorial](http:<br>#www.grymoire.com/Unix/Sed.html)
-- For `awk`: [Awk Tutorial](http:<br>#www.grymoire.com/Unix/Awk.html)
+- For `sed`: [Sed - An Introduction and Tutorial](http:\n#www.grymoire.com/Unix/Sed.html)
+- For `awk`: [Awk Tutorial](http:\n#www.grymoire.com/Unix/Awk.html)
 
 ## Additional Exercises
 
@@ -186,13 +186,13 @@ Remember to work on solutions for Python and Bash. It is also worth thinking abo
 
 Note that this is a long list of exercises and many of them are signifcantly more involved than what we discussed so far. We recommend working on one exercise per day in the order listed here.
 
-- [Regular Expressions](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reg_ex)
-- [Analyzing Apache Logs](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/analyzing_apache-logs).
-- [Ini Files](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/ini_files).
-- [Reports](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reports)
-- [Traceroutes](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/traceroutes)
-- [Analyzing video log files](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
+- [Regular Expressions](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reg_ex)
+- [Analyzing Apache Logs](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/analyzing_apache-logs).
+- [Ini Files](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/ini_files).
+- [Reports](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reports)
+- [Traceroutes](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/traceroutes)
+- [Analyzing video log files](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
 
 ## Next Chapter
 
-Let us move on to [chapter 4](https:<br>#github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter4).
+Let us move on to [chapter 4](https:\n#github.com/InsightDataScience/Parsing-Workshop/tree/master/chapter4).
