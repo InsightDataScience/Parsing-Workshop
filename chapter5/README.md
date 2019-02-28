@@ -133,11 +133,11 @@ and should see
 ```
 ### Additional resources
 
-- The (Readme)[https://github.com/ericchiang/pup] provides a great resource to learn more about `pup`
+- The [Readme](https://github.com/ericchiang/pup) provides a great resource to learn more about `pup`
 
 ## Python
 
-There are many great resources for parsing html documents using Python. (BeautifulSoup)[https://www.crummy.com/software/BeautifulSoup/bs4/doc/] has emerged as one of the most popular and convenient tools for html parsing under Python.
+There are many great resources for parsing html documents using Python. [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) has emerged as one of the most popular and convenient tools for html parsing under Python.
 
 There are many great resources on BeautifulSoup online, we like the one from DigitalOcean which explains syntax and concepts very cleanly.
 
