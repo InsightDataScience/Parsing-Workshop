@@ -11,7 +11,7 @@ Let us jump right into looking into a basic example
     </head>
     <body>
         <h1> Hello World </h1>
-        <p> Here is a paragraph </p>
+        <p id="unique_identifier"> Here is a paragraph </p>
         <p> Here is a another one!</p>
     <body>
 </html>
@@ -45,15 +45,89 @@ cm-small-content wx-media-group
 
 
 ## Bash
-tbd
 
+There are many different parsing tools available, we will first discuss (xpath)[https://www.w3schools.com/xml/xml_xpath.asp] here.
+With xpath, given an html file, you can provide a query using a *path expression* to return the nodes within the html document that you are interested in.
+
+For instance, if you want to parse `hello.html` and extract all the nodes with the `<p>` tag, you can type the following:
+
+```Bash
+xpath hello.html '//h1'
+```
+
+If you want `title` tags that are located within the `head` tag, you could use the following query:
+
+```Bash
+xpath hello.html '/html/head/title'
+```
+
+You can use this approach to find subnodes within any path, i.e. the query `/a/b/c/d` will find all `d` notes that live under the path `a/b/c`.
 ### Additional resources
 - (xpath Cheatsheet)[https://devhints.io/xpath#prefixes]
+
+While `xpath` goes a long way, it can be quite clunky when dealing with complex html files.
+
+A powerful alternative is given by (pup)[https://github.com/ericchiang/pup]. Let us dive right into an example, if you execute
+
+```
+curl https://www.insightdevops.com | pup 'title'
+```
+you should get the following output:
+```
+<title>
+ Insight DevOps Engineering Fellows Program
+</title>
+```
+
+In general `pup 'element'` filters the html file for all nodes of type `element`. We can chain these filters conveniently:
+
+```
+cat hello.html | pup 'body p'
+```
+
+returns
+
+```
+<p id="unique_identifier">
+ Here is a paragraph
+</p>
+<p>
+ Here is a another one!
+</p>
+```
+
+We can also specify the `id` using `#`:
+
+```
+cat hello.html | pup 'body p#unique_identifier'
+```
+
+return_status
+
+```
+<p id="unique_identifier">
+ Here is a paragraph
+</p>
+```
+
+### Additional resources
+
+- The (Readme)[https://github.com/ericchiang/pup] provides a great resource to learn more about `pup`
+
 ## Python
 
-tbd
+There are many great resources for parsing html documents using Python. (BeautifulSoup)[https://www.crummy.com/software/BeautifulSoup/bs4/doc/] has emerged as one of the most popular and convenient tools for html parsing under Python.
+
+There are many great resources on BeautifulSoup online, we like the one from DigitalOcean which explains syntax and concepts very cleanly.
+
+### Action item
+
+- Work through the excellent tutorial on BeautifulSoup on [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-scrape-web-pages-with-beautiful-soup-and-python-3)
 
 ## Exercises
+
+- Let us the tackle the classic web scraping example: [Extract all article titles from the New York Times homepage](http://www.practicepython.org/exercise/2014/06/06/17-decode-a-web-page.html)!
+- Be sure to solve the above exercise using Python and Bash.
 
 ## Additional Exercise
 - [Weather Forecast](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/weather_forecast)
