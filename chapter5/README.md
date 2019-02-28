@@ -46,6 +46,9 @@ cm-small-content wx-media-group
 
 ## Bash
 tbd
+
+### Additional resources
+- (xpath Cheatsheet)[https://devhints.io/xpath#prefixes]
 ## Python
 
 tbd
