@@ -6,13 +6,137 @@ We will really only discuss a glimpse of what `awk` and `sed` do in this chapter
 
 ## awk
 
-- Syntax: `awk [options] 'program text' file`
-- Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way. See the example for illustration.
-- Example: `ls -l | awk ‘{print $1}’`. This will print the first column of `ls -l`. With respect to our syntax, `file` is `ls -l`. Our program text can access the columns of each line via `$1, $2, etc`. The variable `$0` contains the whole file.
-- Notable Options:
-  - `F`: Specify delimiter, whitespace is default.
+- Syntax: `awk [options] 'BEGIN{}; {}; END{}' file`  
+-- The BEGIN block is executed before processing the first line.  
+-- The MIDDLE block is executed on every line.  
+-- The END block is executed after the EOF signal.  
+- Description: Works through `file` line by line according to `program text`. `program text` can access each line in a field delimited way.  This is very similar to the Split() function, found in many languagues, being run on each line of a file.
 
 ### Exercises
+Our First Awk  
+consider the file:  
+```
+$ cat FILE  
+1 2 3  
+4 5 6  
+7 8 9  
+```
+- if we use awk on this text document we can mimic the linux command 'cat'
+```
+$ awk '{print $0}' FILE 
+# Print each line  
+1 2 3  
+4 5 6  
+7 8 9  
+```
+```
+$ awk '{print $1}' FILE 
+# print the first number of each line  
+1  
+4  
+7  
+```
+The previous examples demonstrate how awk is NOT 0-indexed.  The zero is reserved for the whole line.  Instead indexing starts at 1.  
+
+- what about?  
+```
+$ awk '{print $4}' FILE
+# no output  
+```
+
+- In the following example, notice how the BEGIN and END blocks are executed once, while the middle block is executed once per line of FILE:  
+```
+$ awk 'BEGIN{print "Hello World"}; {print "awkWard"}; END{print "easy huh?"}' FILE 
+#Print some strings    
+Hello World  
+awkWard  
+awkWard  
+awkWard  
+easy huh?  
+```
+```
+$ awk '{x+=$2; print $3};END{print "="; print x}' FILE 
+#simple addition 1-liner  
+3    
+6      
+9    
+= 
+18  
+```
+- A Huge reason why awk is very useful is because of what you saw in the previous examples.  90% of use cases are taking one linux command and piping it to awk.  This in turn allows you to select a specific value and print it to your screen.  
+
+- With that said, awk can be not only useful, but incredibly powerful.  I used to work in a lab where one of the post-docs used awk instead of python or perl for ALL of his scripting.  
+
+- First of all, awk can do c-style for loops: Notice the NF variable, this is Number of Fields, i.e. the length of the array after the split is performed.  
+```
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{ for (i=1; i<=NF; i++){print x[i]}}' FILE 
+# notice how for loops have () around conditions, and {} around the actual contents.  
+12  
+15  
+18  
+```
+- In addition, awk can do key value loops as well:
+```
+$ awk '{for(i=1; i<=NF; i++){x[i]+=$i}};END{for (i in x){print x[i]}}' FILE 
+#Notice how the order changed!  
+15  
+18  
+12  
+```
+
+- Alright, so we can do some basic math and such with awk.  How about parsing log files?  
+- As tasks get more complex, awk actually begins to shine.  Consider a regularly recurring task which prints the time of a ping and response from various servers on your network.  
+```
+$ cat FILE2
+Us-North: 35   
+Us-East: 32  
+Us-South: 112  
+Us-West: 128  
+Us-North: 34   
+Us-East: 31  
+Us-South: 111  
+Us-West: 127  
+Us-North: 36  
+Us-East: 33  
+Us-South: 113  
+Us-West: 129  
+```
+- How can we use this log file to get each average latency (or other value) for each server? etc? (Notice the FS, this is the Field separator which defaults to " ")
+```
+$ awk 'BEGIN{FS=": "};{x[$1]+=$2}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/3.0}}' FILE2
+Average Latencies:  
+------  
+Us-North  :  35  
+Us-West  :  128  
+Us-East  :  32  
+Us-South  :  112  
+```
+- Well, that is nice and good, but what if we dont know how many of each ping/response there is? what if they're not in order? etc??  Easy, just add a counter.
+```
+$ awk 'BEGIN{FS": "};{x[$1]+=$2; y[$1]++}; END{print "Average Latencies:\n------"; for(i in x){print i, " : ", x[i]/y[i]}}' FILE2 # notice different order! (Also note, this is not covering floating point div, just google it)
+Average Latencies:  
+------  
+Us-West:  :  128  
+Us-East:  :  32  
+Us-South:  :  112  
+Us-North:  :  35  
+```
+- A regex example, just so you have some experience with it.  WAIT, Regex too?!  That means you can search for lines that begin with a specific word or pattern, and then print their pattern?  Yes, exactly.   
+- Regex follows the syntax : String~/substring/ (see the example below, but basically a ~/ / allows regex in awk)
+Consider: 
+```
+$ cat FILE3 
+1 2 3  
+4 5 6  
+a b c  
+7 8 9  
+```
+```
+$ awk '{if($2~/[0-9]+/){x+=$2; y++};END{print x/y}' FILE3  
+# the regex causes you to not try to add 'b' to your value of 7
+5  
+```
+- Try to write the command to only get Us-West latencies from FILE2.
 
 - Before you run it, what does
 ```
@@ -30,7 +154,29 @@ Sed is a powerful stream editor with a plethora of options. For this workshop, w
 - Description: Reads through the file one line at a time and performs processing on it based on options.
 - Example: `sed ‘s/old/NEW/’ file` This command will substitute `old` with `NEW` everywhere in the file.
 
-In general, options given to `sed` starting with `s/` will form some sort of substitution on the file.
+Utilizing sed requires an understanding of RegEx.  REGular EXpressions are a form of text matching which is used in many modern scripting languages.  Sed works in much the same way that awk does, in that it works on each individual line and performs operations.  
+While my individual knowledge of sed is shallow compared to my awk, in general I find that 95% of my use cases with sed involve only a few parameters.
+
+- First, the -i flag to sed allows you to edit the file in place, as opposed to writing to standard out.  If given a character(s) after the -i a BACKUP of the original file will be written with the extension .character(s)
+```
+sed -i bak 's/old/NEW/g' file
+```
+The 's' stipulates substitution, and the 'g' stipulates that sed will not go to the next line after performing one substitution, i.e. global.
+
+
+You should know : sed substitutions do not require that your regexp be wrapped in forward slashes as in : s/old/new/.  Instead you can use something like
+```
+sed  's@old@NEW@g' FILE
+```
+  This is a really useful case when editing filestructures or websites.
+
+Finally, instead of combining head and tail to print a specific line of a file.  We can use the following syntax for a more computationally efficient solution.
+```
+sed -n 25p FILE 
+# print the 25th line
+sed -n 25d FILE 
+# delete the 25th line
+```
 
 ### Exercises
 - What does `sed -n "/test/p" example.txt` do?
@@ -54,7 +200,7 @@ Note that this is a long list of exercises and many of them are signifcantly mor
 - [Ini Files](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/ini_files).
 - [Reports](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/reports)
 - [Traceroutes](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/traceroutes)
-- [Analyzing video log files](https://github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
+- [Analyzing video log files](https:///github.com/InsightDataScience/Parsing-Workshop/tree/master/exercises/video_log_files)
 
 ## Next Chapter
 
